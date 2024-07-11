@@ -15,7 +15,7 @@
 
 >6.git commit 可以将暂存区里更新后的代码更新到本地git
 
->7.git push origin xxx 将本地的xxxgit分支上传至github上的git
+>7.git push origin xxx 将本地的 xxxgit分支上传至github上的  git
 -----------------------------------------------------------
 ### （如果在写自己的代码过程中发现远端GitHub上代码出现改变）
 
@@ -33,7 +33,7 @@
 
 >6.原项目主人采用pull request 中的 squash and merge 合并所有不同的commit变成一个改变
 ----------------------------------------------------------------------------------------------
-### 远端完成更新后
+### 远端完成更新之后 
 >GitHub上面有个按钮叫delete branch 删除掉远端的my-feature
 
 >1.切换到main branch上面 git branch -d xxx 删除本地的git分支
