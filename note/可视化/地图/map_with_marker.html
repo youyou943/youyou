@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script>
+        L_NO_TOUCH = false;
+        L_DISABLE_3D = false;
+
+    </script>
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <style>
+        #map {
+            position: absolute;
+            top: 0;
+            /* 为搜索栏留出50像素的空间 */
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    </style>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css" />
+
+
+
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+    <style>
+        #map_4b681ccfe37c493a316aced4219518da {
+            position: relative;
+            width: 100.0%;
+            height: 100.0%;
+            left: 0.0%;
+            top: 0.0%;
+        }
+
+        .leaflet-container {
+            font-size: 1rem;
+        }
+
+        #search-container {
+            position: fixed;
+            top: 5px;
+            left: 50px;
+            z-index: 1000;
+            /* 确保搜索栏在地图上方 */
+        }
+
+        #search-input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+
+        #search-input::placeholder {
+            color: #999;
+        }
+
+        #classify {
+            position: fixed;
+            top: 5px;
+            left: 1500px;
+            z-index: 1000;
+        }
+
+        #btn {
+            color: #ed30b8;
+
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css" />
+    <!-- 引入 Element UI 的 CSS 文件 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入 Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div class="folium-map" id="map_4b681ccfe37c493a316aced4219518da"></div>
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="请输入您要搜索的大学">
+        <el-button type="primary" round id="search-button">搜索</el-button>
+        <!-- 在搜索框下方添加一个列表，用于显示匹配的大学名称 -->
+        <div id="university-list"></div>
+    </div>
+    <div id="classify"><el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+            点我打开
+        </el-button>
+        <el-drawer :visible.sync="drawer" :close-on-click-modal="true" @close="handleClose" direction="rtl" size="45%">
+            <el-tabs type="border-card">
+                <el-tab-pane label="综合类">
+                    <el-table :data="tableDataA" border style="width: 100%">
+                        <el-table-column prop="chinese_name" label="学校名称" width="180"></el-table-column>
+                        <el-table-column prop="english_name" label="学校名称(英文)" width="180"></el-table-column>
+                        <el-table-column prop="rank" label="综合类排名"></el-table-column>
+                    </el-table>
+                </el-tab-pane>
+                <el-tab-pane label="医学类">
+                    <el-table :data="tableDataB" border style="width: 100%">
+                        <el-table-column prop="chinese_name" label="学校名称" width="180"></el-table-column>
+                        <el-table-column prop="english_name" label="学校名称(英文)" width="180"></el-table-column>
+                        <el-table-column prop="rank" label="医学类排名"></el-table-column>
+                    </el-table>
+                </el-tab-pane>
+                <el-tab-pane label="财经类">
+                    <el-table :data="tableDataC" border style="width: 100%">
+                        <el-table-column prop="chinese_name" label="学校名称" width="180"></el-table-column>
+                        <el-table-column prop="english_name" label="学校名称(英文)" width="180"></el-table-column>
+                        <el-table-column prop="rank" label="财经类排名"></el-table-column>
+                    </el-table>
+                </el-tab-pane>
+                <el-tab-pane label="政法类">
+                    <el-table :data="tableDataD" border style="width: 100%">
+                        <el-table-column prop="chinese_name" label="学校名称" width="180"></el-table-column>
+                        <el-table-column prop="english_name" label="学校名称(英文)" width="180"></el-table-column>
+                        <el-table-column prop="rank" label="政法类排名"></el-table-column>
+                    </el-table>
+                </el-tab-pane>
+                <el-tab-pane label="合作办学类">
+                    <el-table :data="tableDataE" border style="width: 100%">
+                        <el-table-column prop="chinese_name" label="学校名称" width="180"></el-table-column>
+                        <el-table-column prop="english_name" label="学校名称(英文)" width="180"></el-table-column>
+                        <el-table-column prop="rank" label="合作办学类排名"></el-table-column>
+                    </el-table>
+                </el-tab-pane>
+                <el-tab-pane label="民族类">
+                    <el-table :data="tableDataF" border style="width: 100%">
+                        <el-table-column prop="chinese_name" label="学校名称" width="180"></el-table-column>
+                        <el-table-column prop="english_name" label="学校名称(英文)" width="180"></el-table-column>
+                        <el-table-column prop="rank" label="民族类排名"></el-table-column>
+                    </el-table>
+                </el-tab-pane>
+                <el-tab-pane label="语言类">
+                    <el-table :data="tableDataG" border style="width: 100%">
+                        <el-table-column prop="chinese_name" label="学校名称" width="180"></el-table-column>
+                        <el-table-column prop="english_name" label="学校名称(英文)" width="180"></el-table-column>
+                        <el-table-column prop="rank" label="语言类排名"></el-table-column>
+                    </el-table>
+                </el-tab-pane>
+            </el-tabs>
+        </el-drawer>
+
+    </div>
+    <!-- 引入 Element UI 的 JavaScript 文件 -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</body>
+<script>
+    new Vue({
+        el: '#search-button'
+    });
+    new Vue({
+        el: '#classify',
+        data() {
+            return {
+                drawer: false, // 控制抽屉的显示隐藏
+                tableDataA: [
+                    {
+                        "chinese_name": "清华大学",
+                        "english_name": "Tsinghua University",
+                        "class_rank": "A",
+                        "rank": "1"
+                    },
+                    {
+                        "chinese_name": "北京大学",
+                        "english_name": "Peking University",
+                        "class_rank": "A",
+                        "rank": "2"
+                    },
+                    {
+                        "chinese_name": "浙江大学",
+                        "english_name": "Zhejiang University",
+                        "class_rank": "A",
+                        "rank": "3"
+                    },
+                    {
+                        "chinese_name": "上海交通大学",
+                        "english_name": "Shanghai Jiao Tong University",
+                        "class_rank": "A",
+                        "rank": "4"
+                    },
+                    {
+                        "chinese_name": "复旦大学",
+                        "english_name": "Fudan University",
+                        "class_rank": "A",
+                        "rank": "5"
+                    },
+                    {
+                        "chinese_name": "南京大学",
+                        "english_name": "Nanjing University",
+                        "class_rank": "A",
+                        "rank": "6"
+                    },
+                    {
+                        "chinese_name": "中国科学技术大学",
+                        "english_name": "University of Science and Technology of China",
+                        "class_rank": "A",
+                        "rank": "7"
+                    },
+                    {
+                        "chinese_name": "华中科技大学",
+                        "english_name": "Huazhong University of Science and Technology",
+                        "class_rank": "A",
+                        "rank": "8"
+                    },
+                    {
+                        "chinese_name": "武汉大学",
+                        "english_name": "Wuhan University",
+                        "class_rank": "A",
+                        "rank": "9"
+                    },
+                    {
+                        "chinese_name": "西安交通大学",
+                        "english_name": "Xi'an Jiaotong University",
+                        "class_rank": "A",
+                        "rank": "10"
+                    },
+                    {
+                        "chinese_name": "中山大学",
+                        "english_name": "Sun Yat-Sen University",
+                        "class_rank": "A",
+                        "rank": "11"
+                    },
+                    {
+                        "chinese_name": "四川大学",
+                        "english_name": "Sichuan University",
+                        "class_rank": "A",
+                        "rank": "12"
+                    },
+                    {
+                        "chinese_name": "哈尔滨工业大学",
+                        "english_name": "Harbin Institute of Technology",
+                        "class_rank": "A",
+                        "rank": "13"
+                    },
+                    {
+                        "chinese_name": "北京航空航天大学",
+                        "english_name": "Beihang University",
+                        "class_rank": "A",
+                        "rank": "14"
+                    },
+                    {
+                        "chinese_name": "东南大学",
+                        "english_name": "Southeast University",
+                        "class_rank": "A",
+                        "rank": "15"
+                    },
+                    {
+                        "chinese_name": "北京理工大学",
+                        "english_name": "Beijing Institute of Technology",
+                        "class_rank": "A",
+                        "rank": "16"
+                    },
+                    {
+                        "chinese_name": "同济大学",
+                        "english_name": "Tongji University",
+                        "class_rank": "A",
+                        "rank": "17"
+                    },
+                    {
+                        "chinese_name": "中国人民大学",
+                        "english_name": "Renmin University of China",
+                        "class_rank": "A",
+                        "rank": "18"
+                    },
+                    {
+                        "chinese_name": "北京师范大学",
+                        "english_name": "Beijing Normal University",
+                        "class_rank": "A",
+                        "rank": "19"
+                    },
+                    {
+                        "chinese_name": "南开大学",
+                        "english_name": "Nankai University",
+                        "class_rank": "A",
+                        "rank": "20"
+                    },
+                    {
+                        "chinese_name": "天津大学",
+                        "english_name": "Tianjin University",
+                        "class_rank": "A",
+                        "rank": "21"
+                    },
+                    {
+                        "chinese_name": "山东大学",
+                        "english_name": "Shandong University",
+                        "class_rank": "A",
+                        "rank": "22"
+                    },
+                    {
+                        "chinese_name": "中南大学",
+                        "english_name": "Central South University",
+                        "class_rank": "A",
+                        "rank": "23"
+                    },
+                    {
+                        "chinese_name": "厦门大学",
+                        "english_name": "Xiamen University",
+                        "class_rank": "A",
+                        "rank": "24"
+                    },
+                    {
+                        "chinese_name": "西北工业大学",
+                        "english_name": "Northwestern Polytechnical University",
+                        "class_rank": "A",
+                        "rank": "25"
+                    },
+                    {
+                        "chinese_name": "华南理工大学",
+                        "english_name": "South China University of Technology",
+                        "class_rank": "A",
+                        "rank": "26"
+                    },
+                    {
+                        "chinese_name": "吉林大学",
+                        "english_name": "Jilin University",
+                        "class_rank": "A",
+                        "rank": "27"
+                    },
+                    {
+                        "chinese_name": "电子科技大学",
+                        "english_name": "University of Electronic Science and Technology of China",
+                        "class_rank": "A",
+                        "rank": "28"
+                    },
+                    {
+                        "chinese_name": "湖南大学",
+                        "english_name": "Hunan University",
+                        "class_rank": "A",
+                        "rank": "29"
+                    },
+                    {
+                        "chinese_name": "中国农业大学",
+                        "english_name": "China Agricultural University",
+                        "class_rank": "A",
+                        "rank": "30"
+                    },
+                    {
+                        "chinese_name": "华东师范大学",
+                        "english_name": "East China Normal University",
+                        "class_rank": "A",
+                        "rank": "31"
+                    },
+                    {
+                        "chinese_name": "大连理工大学",
+                        "english_name": "Dalian University of Technology",
+                        "class_rank": "A",
+                        "rank": "32"
+                    },
+                    {
+                        "chinese_name": "南方科技大学",
+                        "english_name": "Southern University of Science and Technology",
+                        "class_rank": "A",
+                        "rank": "33"
+                    },
+                    {
+                        "chinese_name": "重庆大学",
+                        "english_name": "Chongqing University",
+                        "class_rank": "A",
+                        "rank": "34"
+                    },
+                    {
+                        "chinese_name": "北京科技大学",
+                        "english_name": "University of Science and Technology Beijing",
+                        "class_rank": "A",
+                        "rank": "35"
+                    },
+                    {
+                        "chinese_name": "南京理工大学",
+                        "english_name": "Nanjing University of Science and Technology",
+                        "class_rank": "A",
+                        "rank": "36"
+                    },
+                    {
+                        "chinese_name": "南京航空航天大学",
+                        "english_name": "Nanjing University of Aeronautics and Astronautics",
+                        "class_rank": "A",
+                        "rank": "37"
+                    },
+                    {
+                        "chinese_name": "东北大学",
+                        "english_name": "Northeastern University",
+                        "class_rank": "A",
+                        "rank": "38"
+                    },
+                    {
+                        "chinese_name": "西安电子科技大学",
+                        "english_name": "Xidian University",
+                        "class_rank": "A",
+                        "rank": "39"
+                    },
+                    {
+                        "chinese_name": "兰州大学",
+                        "english_name": "Lanzhou University",
+                        "class_rank": "A",
+                        "rank": "40"
+                    },
+                    {
+                        "chinese_name": "苏州大学",
+                        "english_name": "Soochow University (China)",
+                        "class_rank": "A",
+                        "rank": "40"
+                    },
+                    {
+                        "chinese_name": "华中农业大学",
+                        "english_name": "Huazhong Agricultural University",
+                        "class_rank": "A",
+                        "rank": "42"
+                    },
+                    {
+                        "chinese_name": "北京交通大学",
+                        "english_name": "Beijing jiaotong University",
+                        "class_rank": "A",
+                        "rank": "43"
+                    },
+                    {
+                        "chinese_name": "华东理工大学",
+                        "english_name": "East China University of Science and Technology",
+                        "class_rank": "A",
+                        "rank": "44"
+                    },
+                    {
+                        "chinese_name": "上海科技大学",
+                        "english_name": "ShanghaiTech University",
+                        "class_rank": "A",
+                        "rank": "45"
+                    },
+                    {
+                        "chinese_name": "郑州大学",
+                        "english_name": "Zhengzhou University",
+                        "class_rank": "A",
+                        "rank": "46"
+                    },
+                    {
+                        "chinese_name": "华中师范大学",
+                        "english_name": "Central China Normal University",
+                        "class_rank": "A",
+                        "rank": "47"
+                    },
+                    {
+                        "chinese_name": "上海大学",
+                        "english_name": "Shanghai University",
+                        "class_rank": "A",
+                        "rank": "48"
+                    },
+                    {
+                        "chinese_name": "哈尔滨工程大学",
+                        "english_name": "Harbin Engineering University",
+                        "class_rank": "A",
+                        "rank": "49"
+                    },
+                    {
+                        "chinese_name": "暨南大学",
+                        "english_name": "Jinan University",
+                        "class_rank": "A",
+                        "rank": "50"
+                    },
+                    {
+                        "chinese_name": "南京农业大学",
+                        "english_name": "Nanjing Agricultural University",
+                        "class_rank": "A",
+                        "rank": "51"
+                    },
+                    {
+                        "chinese_name": "中国石油大学（北京）",
+                        "english_name": "China University of Petroleum - Beijing",
+                        "class_rank": "A",
+                        "rank": "52"
+                    },
+                    {
+                        "chinese_name": "东北师范大学",
+                        "english_name": "Northeast Normal University",
+                        "class_rank": "A",
+                        "rank": "53"
+                    },
+                    {
+                        "chinese_name": "武汉理工大学",
+                        "english_name": "Wuhan University of Technology",
+                        "class_rank": "A",
+                        "rank": "54"
+                    },
+                    {
+                        "chinese_name": "西南交通大学",
+                        "english_name": "Southwest Jiaotong University",
+                        "class_rank": "A",
+                        "rank": "55"
+                    },
+                    {
+                        "chinese_name": "中国矿业大学",
+                        "english_name": "China University of Mining and Technology - Xuzhou",
+                        "class_rank": "A",
+                        "rank": "56"
+                    },
+                    {
+                        "chinese_name": "北京邮电大学",
+                        "english_name": "Beijing University of Posts and Telecommunications",
+                        "class_rank": "A",
+                        "rank": "57"
+                    },
+                    {
+                        "chinese_name": "南京师范大学",
+                        "english_name": "Nanjing Normal University",
+                        "class_rank": "A",
+                        "rank": "58"
+                    },
+                    {
+                        "chinese_name": "中国地质大学（武汉）",
+                        "english_name": "China University of Geosciences (Wuhan)",
+                        "class_rank": "A",
+                        "rank": "59"
+                    },
+                    {
+                        "chinese_name": "江南大学",
+                        "english_name": "Jiangnan University",
+                        "class_rank": "A",
+                        "rank": "60"
+                    },
+                    {
+                        "chinese_name": "河海大学",
+                        "english_name": "Hohai University",
+                        "class_rank": "A",
+                        "rank": "61"
+                    },
+                    {
+                        "chinese_name": "中国海洋大学",
+                        "english_name": "Ocean University of China",
+                        "class_rank": "A",
+                        "rank": "62"
+                    },
+                    {
+                        "chinese_name": "北京工业大学",
+                        "english_name": "Beijing University of Technology",
+                        "class_rank": "A",
+                        "rank": "63"
+                    },
+                    {
+                        "chinese_name": "北京化工大学",
+                        "english_name": "Beijing University of Chemical Technology",
+                        "class_rank": "A",
+                        "rank": "64"
+                    },
+                    {
+                        "chinese_name": "西北大学",
+                        "english_name": "Northwest University",
+                        "class_rank": "A",
+                        "rank": "65"
+                    },
+                    {
+                        "chinese_name": "中国石油大学（华东）",
+                        "english_name": "China University of Petroleum (Huadong)",
+                        "class_rank": "A",
+                        "rank": "66"
+                    },
+                    {
+                        "chinese_name": "陕西师范大学",
+                        "english_name": "Shaanxi Normal University",
+                        "class_rank": "A",
+                        "rank": "67"
+                    },
+                    {
+                        "chinese_name": "深圳大学",
+                        "english_name": "Shenzhen University",
+                        "class_rank": "A",
+                        "rank": "68"
+                    },
+                    {
+                        "chinese_name": "南昌大学",
+                        "english_name": "Nanchang University",
+                        "class_rank": "A",
+                        "rank": "69"
+                    },
+                    {
+                        "chinese_name": "浙江工业大学",
+                        "english_name": "Zhejiang University of Technology",
+                        "class_rank": "A",
+                        "rank": "70"
+                    },
+                    {
+                        "chinese_name": "中国地质大学（北京）",
+                        "english_name": "China University of Geosciences (Beijing)",
+                        "class_rank": "A",
+                        "rank": "71"
+                    },
+                    {
+                        "chinese_name": "西南大学",
+                        "english_name": "Southwest University",
+                        "class_rank": "A",
+                        "rank": "72"
+                    },
+                    {
+                        "chinese_name": "福州大学",
+                        "english_name": "Fuzhou University",
+                        "class_rank": "A",
+                        "rank": "73"
+                    },
+                    {
+                        "chinese_name": "西北农林科技大学",
+                        "english_name": "Northwest A&F University",
+                        "class_rank": "A",
+                        "rank": "74"
+                    },
+                    {
+                        "chinese_name": "华北电力大学",
+                        "english_name": "North China Electric Power University",
+                        "class_rank": "A",
+                        "rank": "75"
+                    },
+                    {
+                        "chinese_name": "中国矿业大学（北京）",
+                        "english_name": "China University of Mining and Technology - Beijing",
+                        "class_rank": "A",
+                        "rank": "76"
+                    },
+                    {
+                        "chinese_name": "东华大学",
+                        "english_name": "Donghua University",
+                        "class_rank": "A",
+                        "rank": "77"
+                    },
+                    {
+                        "chinese_name": "江苏大学",
+                        "english_name": "Jiangsu University",
+                        "class_rank": "A",
+                        "rank": "78"
+                    },
+                    {
+                        "chinese_name": "华南师范大学",
+                        "english_name": "South China Normal University",
+                        "class_rank": "A",
+                        "rank": "79"
+                    },
+                    {
+                        "chinese_name": "云南大学",
+                        "english_name": "Yunnan University",
+                        "class_rank": "A",
+                        "rank": "80"
+                    },
+                    {
+                        "chinese_name": "扬州大学",
+                        "english_name": "Yangzhou University",
+                        "class_rank": "A",
+                        "rank": "81"
+                    },
+                    {
+                        "chinese_name": "北京林业大学",
+                        "english_name": "Beijing Forestry University",
+                        "class_rank": "A",
+                        "rank": "82"
+                    },
+                    {
+                        "chinese_name": "合肥工业大学",
+                        "english_name": "Hefei University of Technology",
+                        "class_rank": "A",
+                        "rank": "83"
+                    },
+                    {
+                        "chinese_name": "宁波大学",
+                        "english_name": "Ningbo University",
+                        "class_rank": "A",
+                        "rank": "84"
+                    },
+                    {
+                        "chinese_name": "南京工业大学",
+                        "english_name": "Nanjing Tech University",
+                        "class_rank": "A",
+                        "rank": "85"
+                    },
+                    {
+                        "chinese_name": "南京邮电大学",
+                        "english_name": "Nanjing University of Posts and Telecommunications",
+                        "class_rank": "A",
+                        "rank": "86"
+                    },
+                    {
+                        "chinese_name": "湖南师范大学",
+                        "english_name": "Hunan Normal University",
+                        "class_rank": "A",
+                        "rank": "87"
+                    },
+                    {
+                        "chinese_name": "长安大学",
+                        "english_name": "Chang'an University",
+                        "class_rank": "A",
+                        "rank": "88"
+                    },
+                    {
+                        "chinese_name": "首都师范大学",
+                        "english_name": "Capital Normal University",
+                        "class_rank": "A",
+                        "rank": "89"
+                    },
+                    {
+                        "chinese_name": "南京信息工程大学",
+                        "english_name": "Nanjing University of Information Science & Technology",
+                        "class_rank": "A",
+                        "rank": "90"
+                    },
+                    {
+                        "chinese_name": "杭州电子科技大学",
+                        "english_name": "Hangzhou Dianzi University",
+                        "class_rank": "A",
+                        "rank": "91"
+                    },
+                    {
+                        "chinese_name": "湘潭大学",
+                        "english_name": "Xiangtan University",
+                        "class_rank": "A",
+                        "rank": "92"
+                    },
+                    {
+                        "chinese_name": "华南农业大学",
+                        "english_name": "South China Agricultural University",
+                        "class_rank": "A",
+                        "rank": "93"
+                    },
+                    {
+                        "chinese_name": "燕山大学",
+                        "english_name": "Yanshan University",
+                        "class_rank": "A",
+                        "rank": "94"
+                    },
+                    {
+                        "chinese_name": "福建师范大学",
+                        "english_name": "Fujian Normal University",
+                        "class_rank": "A",
+                        "rank": "95"
+                    },
+                    {
+                        "chinese_name": "广西大学",
+                        "english_name": "Guangxi University",
+                        "class_rank": "A",
+                        "rank": "96"
+                    },
+                    {
+                        "chinese_name": "广州大学",
+                        "english_name": "Guangzhou University",
+                        "class_rank": "A",
+                        "rank": "97"
+                    },
+                    {
+                        "chinese_name": "河南大学",
+                        "english_name": "Henan University",
+                        "class_rank": "A",
+                        "rank": "98"
+                    },
+                    {
+                        "chinese_name": "大连海事大学",
+                        "english_name": "Dalian Maritime University",
+                        "class_rank": "A",
+                        "rank": "99"
+                    },
+                    {
+                        "chinese_name": "浙江师范大学",
+                        "english_name": "Zhejiang Normal University",
+                        "class_rank": "A",
+                        "rank": "100"
+                    },
+                    {
+                        "chinese_name": "广东工业大学",
+                        "english_name": "Guangdong University of Technology",
+                        "class_rank": "A",
+                        "rank": "101"
+                    },
+                    {
+                        "chinese_name": "上海理工大学",
+                        "english_name": "University of Shanghai for Science and Technology",
+                        "class_rank": "A",
+                        "rank": "102"
+                    },
+                    {
+                        "chinese_name": "山西大学",
+                        "english_name": "Shanxi University",
+                        "class_rank": "A",
+                        "rank": "103"
+                    },
+                    {
+                        "chinese_name": "安徽大学",
+                        "english_name": "Anhui University",
+                        "class_rank": "A",
+                        "rank": "104"
+                    },
+                    {
+                        "chinese_name": "山东师范大学",
+                        "english_name": "Shandong Normal University",
+                        "class_rank": "A",
+                        "rank": "105"
+                    },
+                    {
+                        "chinese_name": "河北工业大学",
+                        "english_name": "Hebei University of Technology",
+                        "class_rank": "A",
+                        "rank": "106"
+                    },
+                    {
+                        "chinese_name": "青岛大学",
+                        "english_name": "Qingdao University",
+                        "class_rank": "A",
+                        "rank": "107"
+                    },
+                    {
+                        "chinese_name": "太原理工大学",
+                        "english_name": "Taiyuan University of Technology",
+                        "class_rank": "A",
+                        "rank": "107"
+                    },
+                    {
+                        "chinese_name": "贵州大学",
+                        "english_name": "Guizhou University",
+                        "class_rank": "A",
+                        "rank": "109"
+                    },
+                    {
+                        "chinese_name": "南京林业大学",
+                        "english_name": "Nanjing Forestry University",
+                        "class_rank": "A",
+                        "rank": "110"
+                    },
+                    {
+                        "chinese_name": "上海师范大学",
+                        "english_name": "Shanghai Normal University",
+                        "class_rank": "A",
+                        "rank": "111"
+                    },
+                    {
+                        "chinese_name": "武汉科技大学",
+                        "english_name": "Wuhan University of Science and Technology",
+                        "class_rank": "A",
+                        "rank": "111"
+                    },
+                    {
+                        "chinese_name": "内蒙古大学",
+                        "english_name": "Inner Mongolia University",
+                        "class_rank": "A",
+                        "rank": "113"
+                    },
+                    {
+                        "chinese_name": "浙江理工大学",
+                        "english_name": "Zhejiang Sci-Tech University",
+                        "class_rank": "A",
+                        "rank": "114"
+                    },
+                    {
+                        "chinese_name": "东北林业大学",
+                        "english_name": "Northeast Forestry University - China",
+                        "class_rank": "A",
+                        "rank": "115"
+                    },
+                    {
+                        "chinese_name": "福建农林大学",
+                        "english_name": "Fujian Agriculture and Forestry University",
+                        "class_rank": "A",
+                        "rank": "116"
+                    },
+                    {
+                        "chinese_name": "西安理工大学",
+                        "english_name": "Xi'an University of Technology",
+                        "class_rank": "A",
+                        "rank": "117"
+                    },
+                    {
+                        "chinese_name": "海南大学",
+                        "english_name": "Hainan University",
+                        "class_rank": "A",
+                        "rank": "118"
+                    },
+                    {
+                        "chinese_name": "江西师范大学",
+                        "english_name": "Jiangxi Normal University",
+                        "class_rank": "A",
+                        "rank": "119"
+                    },
+                    {
+                        "chinese_name": "东北农业大学",
+                        "english_name": "Northeast Agricultural University - China",
+                        "class_rank": "A",
+                        "rank": "120"
+                    },
+                    {
+                        "chinese_name": "长沙理工大学",
+                        "english_name": "Changsha University of Science and Technology",
+                        "class_rank": "A",
+                        "rank": "121"
+                    },
+                    {
+                        "chinese_name": "西安建筑科技大学",
+                        "english_name": "Xi'an University of Architecture and Technology",
+                        "class_rank": "A",
+                        "rank": "122"
+                    },
+                    {
+                        "chinese_name": "湖北大学",
+                        "english_name": "Hubei University",
+                        "class_rank": "A",
+                        "rank": "123"
+                    },
+                    {
+                        "chinese_name": "昆明理工大学",
+                        "english_name": "Kunming University of Science and Technology",
+                        "class_rank": "A",
+                        "rank": "124"
+                    },
+                    {
+                        "chinese_name": "江苏师范大学",
+                        "english_name": "Jiangsu Normal University",
+                        "class_rank": "A",
+                        "rank": "125"
+                    },
+                    {
+                        "chinese_name": "山东科技大学",
+                        "english_name": "Shandong University of Science and Technology",
+                        "class_rank": "A",
+                        "rank": "126"
+                    },
+                    {
+                        "chinese_name": "辽宁大学",
+                        "english_name": "Liaoning University",
+                        "class_rank": "A",
+                        "rank": "127"
+                    },
+                    {
+                        "chinese_name": "西南石油大学",
+                        "english_name": "Southwest Petroleum University",
+                        "class_rank": "A",
+                        "rank": "128"
+                    },
+                    {
+                        "chinese_name": "杭州师范大学",
+                        "english_name": "Hangzhou Normal University",
+                        "class_rank": "A",
+                        "rank": "129"
+                    },
+                    {
+                        "chinese_name": "河北大学",
+                        "english_name": "Hebei University",
+                        "class_rank": "A",
+                        "rank": "130"
+                    },
+                    {
+                        "chinese_name": "陕西科技大学",
+                        "english_name": "Shaanxi University of Science and Technology",
+                        "class_rank": "A",
+                        "rank": "131"
+                    },
+                    {
+                        "chinese_name": "安徽师范大学",
+                        "english_name": "Anhui Normal University",
+                        "class_rank": "A",
+                        "rank": "132"
+                    },
+                    {
+                        "chinese_name": "北京建筑大学",
+                        "english_name": "Beijing University of Civil Engineering and Architecture",
+                        "class_rank": "A",
+                        "rank": "133"
+                    },
+                    {
+                        "chinese_name": "华侨大学",
+                        "english_name": "Huaqiao University",
+                        "class_rank": "A",
+                        "rank": "134"
+                    },
+                    {
+                        "chinese_name": "汕头大学",
+                        "english_name": "Shantou University",
+                        "class_rank": "A",
+                        "rank": "135"
+                    },
+                    {
+                        "chinese_name": "新疆大学",
+                        "english_name": "Xinjiang University",
+                        "class_rank": "A",
+                        "rank": "136"
+                    },
+                    {
+                        "chinese_name": "江苏科技大学",
+                        "english_name": "Jiangsu University of Science and Technology",
+                        "class_rank": "A",
+                        "rank": "137"
+                    },
+                    {
+                        "chinese_name": "石河子大学",
+                        "english_name": "Shihezi University",
+                        "class_rank": "A",
+                        "rank": "138"
+                    },
+                    {
+                        "chinese_name": "中国计量大学",
+                        "english_name": "China Jiliang University",
+                        "class_rank": "A",
+                        "rank": "139"
+                    },
+                    {
+                        "chinese_name": "河南农业大学",
+                        "english_name": "Henan Agricultural University",
+                        "class_rank": "A",
+                        "rank": "140"
+                    },
+                    {
+                        "chinese_name": "重庆邮电大学",
+                        "english_name": "Chongqing University of Posts and Telecommunications",
+                        "class_rank": "A",
+                        "rank": "141"
+                    },
+                    {
+                        "chinese_name": "湖北工业大学",
+                        "english_name": "Hubei University of Technology",
+                        "class_rank": "A",
+                        "rank": "142"
+                    },
+                    {
+                        "chinese_name": "沈阳农业大学",
+                        "english_name": "Shenyang Agricultural University",
+                        "class_rank": "A",
+                        "rank": "142"
+                    },
+                    {
+                        "chinese_name": "四川农业大学",
+                        "english_name": "Sichuan Agricultural University",
+                        "class_rank": "A",
+                        "rank": "142"
+                    }
+                ],
+                tableDataB: [
+                    {
+                        "chinese_name": "北京协和医学院",
+                        "english_name": "Peking Union Medical College",
+                        "class_rank": "B",
+                        "rank": "医1"
+                    },
+                    {
+                        "chinese_name": "首都医科大学",
+                        "english_name": "Capital Medical University",
+                        "class_rank": "B",
+                        "rank": "医2"
+                    },
+                    {
+                        "chinese_name": "南京医科大学",
+                        "english_name": "Nanjing Medical University",
+                        "class_rank": "B",
+                        "rank": "医3"
+                    },
+                    {
+                        "chinese_name": "南方医科大学",
+                        "english_name": "Southern Medical University",
+                        "class_rank": "B",
+                        "rank": "医4"
+                    },
+                    {
+                        "chinese_name": "哈尔滨医科大学",
+                        "english_name": "Harbin Medical University",
+                        "class_rank": "B",
+                        "rank": "医5"
+                    },
+                    {
+                        "chinese_name": "天津医科大学",
+                        "english_name": "Tianjin Medical University",
+                        "class_rank": "B",
+                        "rank": "医6"
+                    },
+                    {
+                        "chinese_name": "中国医科大学",
+                        "english_name": "China Medical University (Shenyang)",
+                        "class_rank": "B",
+                        "rank": "医7"
+                    },
+                    {
+                        "chinese_name": "北京中医药大学",
+                        "english_name": "Beijing University of Chinese Medicine",
+                        "class_rank": "B",
+                        "rank": "医8"
+                    },
+                    {
+                        "chinese_name": "温州医科大学",
+                        "english_name": "Wenzhou Medical University",
+                        "class_rank": "B",
+                        "rank": "医9"
+                    },
+                    {
+                        "chinese_name": "中国药科大学",
+                        "english_name": "China Pharmaceutical University",
+                        "class_rank": "B",
+                        "rank": "医10"
+                    },
+                    {
+                        "chinese_name": "上海中医药大学",
+                        "english_name": "Shanghai University of Traditional Chinese Medicine",
+                        "class_rank": "B",
+                        "rank": "医11"
+                    },
+                    {
+                        "chinese_name": "重庆医科大学",
+                        "english_name": "Chongqing Medical University",
+                        "class_rank": "B",
+                        "rank": "医12"
+                    },
+                    {
+                        "chinese_name": "广州医科大学",
+                        "english_name": "Guangzhou Medical University",
+                        "class_rank": "B",
+                        "rank": "医13"
+                    },
+                    {
+                        "chinese_name": "河北医科大学",
+                        "english_name": "Hebei Medical University",
+                        "class_rank": "B",
+                        "rank": "医14"
+                    },
+                    {
+                        "chinese_name": "南京中医药大学",
+                        "english_name": "Nanjing University of Chinese Medicine",
+                        "class_rank": "B",
+                        "rank": "医15"
+                    },
+                    {
+                        "chinese_name": "大连医科大学",
+                        "english_name": "Dalian Medical University",
+                        "class_rank": "B",
+                        "rank": "医16"
+                    },
+                    {
+                        "chinese_name": "安徽医科大学",
+                        "english_name": "Anhui Medical University",
+                        "class_rank": "B",
+                        "rank": "医17"
+                    },
+                    {
+                        "chinese_name": "福建医科大学",
+                        "english_name": "Fujian Medical University",
+                        "class_rank": "B",
+                        "rank": "医18"
+                    }
+                ],
+                tableDataC: [
+                    {
+                        "chinese_name": "上海财经大学",
+                        "english_name": "Shanghai University of Finance and Economics",
+                        "class_rank": "C",
+                        "rank": "财1"
+                    },
+                    {
+                        "chinese_name": "中央财经大学",
+                        "english_name": "Central University of Finance and Economics",
+                        "class_rank": "C",
+                        "rank": "财2"
+                    },
+                    {
+                        "chinese_name": "对外经济贸易大学",
+                        "english_name": "University of International Business and Economics",
+                        "class_rank": "C",
+                        "rank": "财3"
+                    },
+                    {
+                        "chinese_name": "西南财经大学",
+                        "english_name": "Southwestern University of Finance and Economics",
+                        "class_rank": "C",
+                        "rank": "财4"
+                    },
+                    {
+                        "chinese_name": "中南财经政法大学",
+                        "english_name": "Zhongnan University of Economics and Law",
+                        "class_rank": "C",
+                        "rank": "财5"
+                    },
+                    {
+                        "chinese_name": "东北财经大学",
+                        "english_name": "Dongbei University of Finance and Economics",
+                        "class_rank": "C",
+                        "rank": "财6"
+                    },
+                    {
+                        "chinese_name": "江西财经大学",
+                        "english_name": "Jiangxi University of Finance & Economics",
+                        "class_rank": "C",
+                        "rank": "财7"
+                    },
+                    {
+                        "chinese_name": "首都经济贸易大学",
+                        "english_name": "Capital University of Economics & Business",
+                        "class_rank": "C",
+                        "rank": "财8"
+                    },
+                    {
+                        "chinese_name": "浙江工商大学",
+                        "english_name": "Zhejiang Gongshang University",
+                        "class_rank": "C",
+                        "rank": "财9"
+                    }
+                ],
+                tableDataD: [
+                    {
+                        "chinese_name": "中国政法大学",
+                        "english_name": "China University of Political Science and Law",
+                        "class_rank": "D",
+                        "rank": "政1"
+                    },
+                    {
+                        "chinese_name": "华东政法大学",
+                        "english_name": "East China University of Political Science and Law",
+                        "class_rank": "D",
+                        "rank": "政2"
+                    }
+                ],
+                tableDataE: [
+                    {
+                        "chinese_name": "香港中文大学（深圳）",
+                        "english_name": "The Chinese University of Hong Kong, Shenzhen",
+                        "class_rank": "E",
+                        "rank": "合作1"
+                    },
+                    {
+                        "chinese_name": "上海纽约大学",
+                        "english_name": "New York University Shanghai",
+                        "class_rank": "E",
+                        "rank": "合作2"
+                    },
+                    {
+                        "chinese_name": "宁波诺丁汉大学",
+                        "english_name": "University of Nottingham Ningbo China",
+                        "class_rank": "E",
+                        "rank": "合作3"
+                    }
+                ],
+                tableDataF: [
+                    {
+                        "chinese_name": "中央民族大学",
+                        "english_name": "Minzu University of China",
+                        "class_rank": "F",
+                        "rank": "民1"
+                    }
+                ],
+                tableDataG: [
+                    {
+                        "chinese_name": "北京外国语大学",
+                        "english_name": "Beijing Foreign Studies University",
+                        "class_rank": "G",
+                        "rank": "语1"
+                    },
+                    {
+                        "chinese_name": "中国传媒大学",
+                        "english_name": "Communication University of China",
+                        "class_rank": "G",
+                        "rank": "语2"
+                    },
+                    {
+                        "chinese_name": "上海外国语大学",
+                        "english_name": "Shanghai International Studies University",
+                        "class_rank": "G",
+                        "rank": "语3"
+                    },
+                    {
+                        "chinese_name": "外交学院",
+                        "english_name": "China Foreign Affairs University",
+                        "class_rank": "G",
+                        "rank": "语4"
+                    },
+                    {
+                        "chinese_name": "北京语言大学",
+                        "english_name": "Beijing Language and Culture University",
+                        "class_rank": "G",
+                        "rank": "语5"
+                    }
+                ]
+            };
+        }
+    });
+
+
+    var map_4b681ccfe37c493a316aced4219518da = L.map(
+        "map_4b681ccfe37c493a316aced4219518da", {
+        center: [35.0, 105.0],
+        crs: L.CRS.EPSG3857,
+        zoom: 5,
+        zoomControl: true,
+        preferCanvas: false,
+    }
+    );
+
+    var tile_layer_aa665c9c7226ae28a9557d9dcb3daa88 = L.tileLayer(
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+        "detectRetina": false,
+        "maxNativeZoom": 19,
+        "maxZoom": 19,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+    }
+    );
+
+    tile_layer_aa665c9c7226ae28a9557d9dcb3daa88.addTo(map_4b681ccfe37c493a316aced4219518da);
+
+    var marker_cluster = L.markerClusterGroup();
+
+    var coordinatesArray = [
+        [40.005443127707, 116.338602099012, '清华大学'],
+        [39.9959475798266, 116.317015997268, '北京大学'],
+        [30.3157921121568, 120.094999178878, '浙江大学'],
+        [31.0241474770999, 121.437286617668, '上海交通大学'],
+        [31.3023628361492, 121.510073438564, '复旦大学'],
+        [32.1218810076797, 118.966685956631, '南京大学'],
+        [31.8479628548402, 117.274607784463, '中国科学技术大学'],
+        [30.515342136715, 114.420160909521, '华中科技大学'],
+        [30.5374362235209, 114.369712431402, '武汉大学'],
+        [34.2561721608643, 108.995853938419, '西安交通大学'],
+        [23.1019727988601, 113.298167701175, '中山大学'],
+        [30.6362342826178, 104.087316352145, '四川大学'],
+        [45.749056747089, 126.639002636418, '哈尔滨工业大学'],
+        [39.9881781208289, 116.354099126687, '北京航空航天大学'],
+        [32.0604853295057, 118.799004028103, '东南大学'],
+        [39.9670215551728, 116.326458176314, '北京理工大学'],
+        [31.2911494529654, 121.508551529369, '同济大学'],
+        [39.9742734844872, 116.324161568447, '中国人民大学'],
+        [39.9672791070186, 116.368148355371, '北京师范大学'],
+        [39.1086558753633, 117.18090275197, '南开大学'],
+        [39.1159114451285, 117.172849982056, '天津大学'],
+        [39.916930848414, 116.42268583034, '北京协和医学院'],
+        [36.6819262206068, 117.063718438871, '山东大学'],
+        [28.1787343564648, 112.937455369526, '中南大学'],
+        [24.4413028251467, 118.099723657254, '厦门大学'],
+        [34.250140259797, 108.922063710268, '西北工业大学'],
+        [23.1555352464079, 113.350792504035, '华南理工大学'],
+        [43.8279979559219, 125.28298074489, '吉林大学'],
+        [30.7494476397349, 103.931098508705, '电子科技大学'],
+        [28.184692474215, 112.955020116818, '湖南大学'],
+        [40.0300421068965, 116.28827686841, '中国农业大学'],
+        [31.2286111111, 121.402222222, '华东师范大学'],
+        [38.8862347617183, 121.535592860814, '大连理工大学'],
+        [22.6050610686516, 114.006280105633, '南方科技大学'],
+        [29.5716396647263, 106.476426947092, '重庆大学'],
+        [31.3110977451457, 121.510281755612, '上海财经大学'],
+        [39.9990895347924, 116.36314146995, '北京科技大学'],
+        [32.0321622609726, 118.86501223562, '南京理工大学'],
+        [32.0389181077143, 118.823697548266, '南京航空航天大学'],
+        [41.7709478042932, 123.425974220073, '东北大学'],
+        [34.2368668402156, 108.92082656392, '西安电子科技大学'],
+        [36.0523303796053, 103.862329628694, '兰州大学'],
+        [31.315271191718, 120.646157758425, '苏州大学'],
+        [30.480825045714, 114.316256067115, '华中农业大学'],
+        [39.9539654506114, 116.348133569625, '北京交通大学'],
+        [31.1504233190697, 121.429795648021, '华东理工大学'],
+        [31.1830183491932, 121.596355862459, '上海科技大学'],
+        [39.8649371975573, 116.292401887311, '首都医科大学'],
+        [34.8173972768939, 113.538468122661, '郑州大学'],
+        [39.9661380882294, 116.350640650473, '中央财经大学'],
+        [30.5287233015756, 114.364505134022, '华中师范大学'],
+        [31.3216396356964, 121.394773411103, '上海大学'],
+        [32.050219733267, 118.780785583885, '南京医科大学'],
+        [45.7826753859496, 126.69167873254, '哈尔滨工程大学'],
+        [23.1960739451328, 113.341168058804, '南方医科大学'],
+        [23.1343644056791, 113.355390929939, '暨南大学'],
+        [40.2284642740099, 116.255439310492, '中国政法大学'],
+        [32.040609362867, 118.847542798537, '南京农业大学'],
+        [39.989060747808, 116.433498913425, '对外经济贸易大学'],
+        [40.2263376278188, 116.253502653643, '中国石油大学（北京）'],
+        [43.8656776668964, 125.335528024001, '东北师范大学'],
+        [30.5288337334932, 114.356287345386, '武汉理工大学'],
+        [30.7671362793842, 103.989128326005, '西南交通大学'],
+        [31.156877393219, 120.847326270601, '中国矿业大学'],
+        [39.9697900134581, 116.367201721025, '北京邮电大学'],
+        [22.6940052092465, 114.217915583711, '香港中文大学（深圳）'],
+        [32.1125442438085, 118.919839144625, '南京师范大学'],
+        [30.5258787805494, 114.408352953084, '中国地质大学（武汉）'],
+        [31.4826765095614, 120.279949952869, '江南大学'],
+        [32.0601324206448, 118.7694376497, '河海大学'],
+        [36.1627949666681, 120.505678227519, '中国海洋大学'],
+        [39.886448354712, 116.486039275584, '北京工业大学'],
+        [45.7072485330205, 126.62197426734, '哈尔滨医科大学'],
+        [39.9762188538854, 116.428852967158, '北京化工大学'],
+        [34.2530497045375, 108.930318868413, '西北大学'],
+        [30.6708485359206, 104.018943445203, '西南财经大学'],
+        [35.9486889214483, 120.181857865757, '中国石油大学（华东）'],
+        [34.2153719958322, 108.959407438115, '陕西师范大学'],
+        [39.1123623141807, 117.191778896102, '天津医科大学'],
+        [30.5457679005306, 114.321405064467, '中南财经政法大学'],
+        [22.5341500326217, 113.936861840592, '深圳大学'],
+        [28.8474089195676, 115.589864710666, '南昌大学'],
+        [30.2985119186894, 120.171955664459, '浙江工业大学'],
+        [41.9619883335804, 123.48960209765, '中国医科大学'],
+        [39.998691780677, 116.35474527784, '中国地质大学（北京）'],
+        [29.8238858903496, 106.425837974009, '西南大学'],
+        [26.0798424626394, 119.280106259691, '福州大学'],
+        [34.2766388492018, 108.090353450458, '西北农林科技大学'],
+        [40.0967660478699, 116.314158038288, '华北电力大学'],
+        [40.0037972544114, 116.353796846882, '中国矿业大学（北京）'],
+        [31.2093936178131, 121.424031580885, '东华大学'],
+        [32.2022576835068, 119.524006552654, '江苏大学'],
+        [23.1463676896615, 113.360846159638, '华南师范大学'],
+        [24.842304761048, 102.848640178458, '云南大学'],
+        [39.9601834932294, 116.317565041596, '北京外国语大学'],
+        [32.385290680301, 119.434017720225, '扬州大学'],
+        [40.0068213362037, 116.355041000014, '北京林业大学'],
+        [39.9155672761393, 116.562736061043, '中国传媒大学'],
+        [31.8530790932976, 117.291566624694, '合肥工业大学'],
+        [39.9774223189338, 116.432991730134, '北京中医药大学'],
+        [29.9120634799122, 121.649954231574, '宁波大学'],
+        [32.0829798389627, 118.647232168123, '南京工业大学'],
+        [32.120313058991, 118.934450173575, '南京邮电大学'],
+        [28.1955155695769, 112.954603123401, '湖南师范大学'],
+        [34.3628549602665, 108.850667825624, '长安大学'],
+        [39.9348097759735, 116.310072904151, '首都师范大学'],
+        [32.2131338148787, 118.730667053381, '南京信息工程大学'],
+        [30.3172873133852, 120.353600853835, '杭州电子科技大学'],
+        [27.8968347286929, 112.952746325912, '湘潭大学'],
+        [23.1581102989273, 113.36007523385, '华南农业大学'],
+        [28.0126729228199, 120.679944538822, '温州医科大学'],
+        [39.9111106416499, 119.543907792583, '燕山大学'],
+        [26.045236455259, 119.314654999763, '福建师范大学'],
+        [22.839397712681, 108.293022479298, '广西大学'],
+        [32.0796502013768, 118.785511209851, '中国药科大学'],
+        [23.0439850777432, 113.378724415553, '广州大学'],
+        [31.282383589889, 121.48895194043, '上海外国语大学'],
+        [31.2013989291686, 121.602633580685, '上海中医药大学'],
+        [34.7534388504545, 113.631419207339, '河南大学'],
+        [38.8792722382598, 121.535412121745, '大连海事大学'],
+        [29.1399820263185, 119.657541985692, '浙江师范大学'],
+        [29.5407319495376, 106.514374965043, '重庆医科大学'],
+        [23.0488136492464, 113.394807407906, '广东工业大学'],
+        [23.1391929337744, 113.261627956771, '广州医科大学'],
+        [31.2983521942115, 121.562136351345, '上海理工大学'],
+        [38.8840645369243, 121.561676508754, '东北财经大学'],
+        [31.1544064665384, 121.48771614154, '上海纽约大学'],
+        [37.8050604284684, 112.592554756248, '山西大学'],
+        [39.9316009388434, 116.352290747864, '外交学院'],
+        [31.765055224203, 117.179905093871, '安徽大学'],
+        [39.9574472043603, 116.326530489908, '中央民族大学'],
+        [36.6608906232321, 117.048356067192, '山东师范大学'],
+        [39.2362613019239, 117.087901429556, '河北工业大学'],
+        [36.0819698972858, 120.423140030821, '青岛大学'],
+        [37.8669022063035, 112.532102119157, '太原理工大学'],
+        [26.4518246427865, 106.679729383941, '贵州大学'],
+        [32.0821612274081, 118.817311404565, '南京林业大学'],
+        [31.1676736747844, 121.425810405456, '上海师范大学'],
+        [30.6282505766602, 114.376782904241, '武汉科技大学'],
+        [40.8165618020551, 111.697599746162, '内蒙古大学'],
+        [30.3185758771471, 120.361207794724, '浙江理工大学'],
+        [45.7227166854348, 126.644009072686, '东北林业大学'],
+        [26.0894133612069, 119.246589043836, '福建农林大学'],
+        [28.7033186238476, 115.86994594824, '江西财经大学'],
+        [29.8051102039724, 121.572415374556, '宁波诺丁汉大学'],
+        [34.2597812013804, 109.002770262032, '西安理工大学'],
+        [20.0623847489102, 110.338973374236, '海南大学'],
+        [28.684289192206, 116.029628825472, '江西师范大学'],
+        [45.7579819077324, 126.730640039119, '东北农业大学'],
+        [38.0492542629459, 114.540866310727, '河北医科大学'],
+        [28.0877006651961, 113.041326794933, '长沙理工大学'],
+        [34.2653250676437, 108.972099327174, '西安建筑科技大学'],
+        [30.5805681761289, 114.336950959962, '湖北大学'],
+        [32.0492487954596, 118.773411663446, '南京中医药大学'],
+        [24.8618028693501, 102.860096897436, '昆明理工大学'],
+        [34.2040416897264, 117.19059169554, '江苏师范大学'],
+        [38.8547771353321, 121.367021969153, '大连医科大学'],
+        [39.8071297737154, 116.320055144469, '首都经济贸易大学'],
+        [36.0111850287783, 120.125672179838, '山东科技大学'],
+        [41.8389775971509, 123.416244313772, '辽宁大学'],
+        [30.8274151366448, 104.185858580148, '西南石油大学'],
+        [30.2947671464097, 120.020300045212, '杭州师范大学'],
+        [38.8772184366595, 115.523958476095, '河北大学'],
+        [34.2991481065889, 108.953401187814, '陕西科技大学'],
+        [31.3394435967846, 118.38688023471, '安徽师范大学'],
+        [39.7556644221355, 116.29038986263, '北京建筑大学'],
+        [24.8949699932619, 118.61958015232, '华侨大学'],
+        [23.4161140359692, 116.64015300241, '汕头大学'],
+        [31.063239845665, 121.201781904492, '华东政法大学'],
+        [43.7710745304259, 87.6274472825468, '新疆大学'],
+        [32.1148712426548, 119.373697403536, '江苏科技大学'],
+        [44.3183276027036, 86.0597940353797, '石河子大学'],
+        [30.3251500682731, 120.368157445471, '中国计量大学'],
+        [40.000220050196, 116.355090766139, '北京语言大学'],
+        [34.7927918677966, 113.668569889332, '河南农业大学'],
+        [31.8551979659385, 117.267683106609, '安徽医科大学'],
+        [29.5392058267335, 106.612662613232, '重庆邮电大学'],
+        [30.4889511725321, 114.317386674429, '湖北工业大学'],
+        [41.8308763099077, 123.57113949218, '沈阳农业大学'],
+        [30.9985562005177, 103.939665828014, '四川农业大学'],
+        [26.0751390647407, 119.189796642395, '福建医科大学'],
+        [30.3133148939738, 120.393898569521, '浙江工商大学']
+
+    ];
+    var universityID = 0;
+    coordinatesArray.forEach(function (coordData) {
+        var latitude = coordData[0];
+        var longitude = coordData[1];
+        universityID = universityID + 1; // 使用计数器生成ID，并在之后递增
+        var popupContent = $(`<div id="html_1" style="width: 100.0%; height: 100.0%;"><a href="/new_page?id=${universityID}">${coordData[2]}</a></div>`)[0];
+        //创建标记点并添加到地图
+        var marker = L.marker([latitude, longitude], {}).addTo(marker_cluster);
+        var icon = L.AwesomeMarkers.icon({
+            "extraClasses": "fa-rotate-0",
+            "icon": "info-sign",
+            "iconColor": "white",
+            "markerColor": "red",
+            "prefix": "glyphicon"
+        });
+        marker.setIcon(icon);
+        //创建弹出窗口并设置内容
+        var popup = L.popup({
+            "maxWidth": "100%"
+        });
+        popup.setContent(popupContent);
+        //绑定弹出窗口到标记点
+        marker.bindPopup(popup);
+    });
+    marker_cluster.addTo(map_4b681ccfe37c493a316aced4219518da);
+
+    /*// 搜索按钮点击事件
+    $("#search-button").click(function () {
+        // 获取搜索框中输入的内容
+        var searchTerm = $("#search-input").val().trim().toLowerCase(); // 将输入内容转换为小写，并去除两端空格
+        // 用于存储匹配的大学名称
+        var matchingUniversities = [];
+        // 遍历坐标数组
+        for (var i = 0; i < coordinatesArray.length; i++) {
+            // 获取大学名称并转换为小写
+            var universityName = coordinatesArray[i][2].toLowerCase();
+            // 如果大学名称包含搜索内容
+            if (universityName.includes(searchTerm)) {
+                // 将匹配的大学名称添加到数组中
+                matchingUniversities.push(coordinatesArray[i]);
+            }
+        }
+        // 如果有匹配的大学
+        if (matchingUniversities.length > 0) {
+            // 创建下拉列表
+            var dropdownMenu = $("<ul>").addClass("list-group");
+            // 将匹配的大学添加到下拉列表中
+            matchingUniversities.forEach(function (university) {
+                var listItem = $("<li>")
+                    .addClass("list-group-item")
+                    .text(university[2])
+                    .on("click", function () {
+                        // 获取大学位置的经纬度
+                        var latlng = L.latLng(university[0], university[1]);
+                        // 将地图视角移动到该位置
+                        map_4b681ccfe37c493a316aced4219518da.setView(latlng, 15); // 设置缩放级别为15
+                        // 关闭模态框
+                        $("#universityModal").modal("hide");
+                    });
+                dropdownMenu.append(listItem);
+            });
+            // 将下拉列表添加到模态框中
+            $("#university-list").empty().append(dropdownMenu);
+            // 打开模态框
+            $("#universityModal").modal("show");
+        } else {
+            alert("未找到匹配的大学！");
+        }
+    });*/
+    // 监听搜索框的输入事件
+    $("#search-input").keyup(function () {
+        // 获取搜索框中输入的内容
+        var searchTerm = $(this).val().trim().toLowerCase(); // 将输入内容转换为小写，并去除两端空格
+        // 用于存储匹配的大学名称
+        var matchingUniversities = [];
+        // 遍历坐标数组
+        for (var i = 0; i < coordinatesArray.length; i++) {
+            // 获取大学名称并转换为小写
+            var universityName = coordinatesArray[i][2].toLowerCase();
+            // 如果大学名称包含搜索内容
+            if (universityName.includes(searchTerm)) {
+                // 将匹配的大学名称添加到数组中
+                matchingUniversities.push(coordinatesArray[i]);
+            }
+        }
+        // 如果有匹配的大学
+        if (matchingUniversities.length > 0) {
+            // 创建下拉列表
+            var dropdownMenu = $("<ul>").addClass("list-group");
+            // 将匹配的大学添加到下拉列表中
+            matchingUniversities.forEach(function (university) {
+                var listItem = $("<li>")
+                    .addClass("list-group-item")
+                    .text(university[2])
+                    .on("click", function () {
+                        // 获取大学位置的经纬度
+                        var latlng = L.latLng(university[0], university[1]);
+                        // 将地图视角移动到该位置
+                        map_4b681ccfe37c493a316aced4219518da.setView(latlng, 15); // 设置缩放级别为15
+                        // 将大学名称显示在输入框中
+                        $("#search-input").val(university[2]);
+                        // 关闭模态框
+                        $("#universityModal").modal("hide");
+                    });
+                dropdownMenu.append(listItem);
+            });
+            // 将下拉列表添加到模态框中
+            $("#university-list").empty().append(dropdownMenu);
+            // 打开模态框
+            $("#universityModal").modal("show");
+        } else {
+            // 如果没有匹配的大学，则清空下拉列表
+            $("#university-list").empty();
+        }
+    });
+
+    // 搜索按钮点击事件
+    $("#search-button").click(function () {
+        // 获取搜索框中输入的内容
+        var searchTerm = $("#search-input").val().trim().toLowerCase(); // 将输入内容转换为小写，并去除两端空格
+        // 遍历坐标数组
+        for (var i = 0; i < coordinatesArray.length; i++) {
+            // 获取大学名称并转换为小写
+            var universityName = coordinatesArray[i][2].toLowerCase();
+            // 如果大学名称与搜索内容匹配
+            if (universityName === searchTerm) {
+                // 获取大学位置的经纬度
+                var latlng = L.latLng(coordinatesArray[i][0], coordinatesArray[i][1]);
+                // 将地图视角移动到该位置
+                map_4b681ccfe37c493a316aced4219518da.setView(latlng, 15); // 设置缩放级别为15
+                // 关闭模态框
+                $("#universityModal").modal("hide");
+                return; // 结束循环
+            }
+        }
+        // 如果没有匹配的大学，则弹出提示框
+        alert("未找到匹配的大学！");
+    });
+
+
+
+</script>
+
+</html>

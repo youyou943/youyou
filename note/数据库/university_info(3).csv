@@ -1,0 +1,365 @@
+学校名称_中文,学校名称_英文,省份,排名,学校地址,学校网址,院系网站,学院网址备注
+清华大学,Tsinghua University,北京,1,"北京市海淀区双清路30号
+",https://baike.baidu.com/item/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6,https://www.tsinghua.edu.cn/yxsz.htm,
+北京大学,Peking University,北京,2,"北京市海淀区颐和园路5号
+",https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%A6,https://www.pku.edu.cn/department.html,
+浙江大学,Zhejiang University,浙江,3,"浙江省杭州市西湖区余杭塘路866号
+",https://baike.baidu.com/item/%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6,https://www.zju.edu.cn/xywxw/list.htm,
+上海交通大学,Shanghai Jiao Tong University,上海,4,"闵行区东川路800号
+",https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6,https://www.sjtu.edu.cn/yxsz/,
+复旦大学,Fudan University,上海,5,"上海市杨浦区邯郸路220号
+",https://baike.baidu.com/item/%E5%A4%8D%E6%97%A6%E5%A4%A7%E5%AD%A6,https://www.fudan.edu.cn/489/list.htm,
+南京大学,Nanjing University,江苏,6,"江苏省南京市仙林大道163号
+",https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%AD%A6,https://www.nju.edu.cn/yxbm.htm,
+中国科学技术大学,University of Science and Technology of China,安徽,7,"安徽省合肥市蜀山区黄山路4号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6,https://www.nju.edu.cn/yxbm.htm,
+华中科技大学,Huazhong University of Science and Technology,湖北,8,"湖北省武汉市洪山区珞喻路1037号
+",https://baike.baidu.com/item/%E5%8D%8E%E4%B8%AD%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6,https://zsb.hust.edu.cn/yxzy.htm,
+武汉大学,Wuhan University,湖北,9,"湖北省武汉市武昌区珞珈山街道八一路299号
+",https://baike.baidu.com/item/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6,https://www.whu.edu.cn/jgsz/yxsz.htm,
+西安交通大学,Xi'an Jiaotong University,陕西,10,"陕西省西安市碑林区咸宁西路28号
+",https://baike.baidu.com/item/%E8%A5%BF%E5%AE%89%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6,https://www.xjtu.edu.cn/yxsz.htm,
+中山大学,Sun Yat-Sen University,广东,11,"广东省广州市海珠区新港西路135号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A6,https://www.sysu.edu.cn/yxsz.htm,
+四川大学,Sichuan University,四川,12,"四川省成都市武侯区一环路南一段24号
+",https://baike.baidu.com/item/%E5%9B%9B%E5%B7%9D%E5%A4%A7%E5%AD%A6,https://www.scu.edu.cn/zzjg/xysz.htm,
+哈尔滨工业大学,Harbin Institute of Technology,黑龙江,13,"黑龙江省哈尔滨市南岗区西大直街92号
+",https://baike.baidu.com/item/%E5%93%88%E5%B0%94%E6%BB%A8%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.hit.edu.cn/11589/list.htm,
+北京航空航天大学,Beihang University,北京,14,"北京市海淀区学院路37号
+",https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9%E5%A4%A7%E5%AD%A6,https://www.buaa.edu.cn/jgsz/jxkyjg.htm,
+东南大学,Southeast University,江苏,15,"江苏省南京市四牌楼2号
+",https://baike.baidu.com/item/%E4%B8%9C%E5%8D%97%E5%A4%A7%E5%AD%A6,https://www.seu.edu.cn/yxsz/list.htm,
+北京理工大学,Beijing Institute of Technology,北京,16,"北京市中关村南大街5号
+",https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6,https://www.bit.edu.cn/gbxxgk/gbgljg/index.htm,
+同济大学,Tongji University,上海,17,"上海市四平路1239号
+",https://baike.baidu.com/item/%E5%90%8C%E6%B5%8E%E5%A4%A7%E5%AD%A6,https://www.tongji.edu.cn/yxjg111/ybshe_zhi/ybsz_.htm,
+中国人民大学,Renmin University of China,北京,18,"海淀区中关村大街59号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E5%A4%A7%E5%AD%A6,https://www.ruc.edu.cn/cn/about/organizational.html,
+北京师范大学,Beijing Normal University,北京,19,"北京市海淀区新街口外大街19号
+",https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,https://www.bnu.edu.cn/xbyx/index.htm,
+南开大学,Nankai University,天津,20,"天津市南开区卫津路94号
+",https://baike.baidu.com/item/%E5%8D%97%E5%BC%80%E5%A4%A7%E5%AD%A6,https://www.nankai.edu.cn/212/list.htm,
+天津大学,Tianjin University,天津,21,"天津市南开区卫津路92号
+",https://baike.baidu.com/item/%E5%A4%A9%E6%B4%A5%E5%A4%A7%E5%AD%A6,https://www.nankai.edu.cn/212/list.htm,点学院没办法直接跳转到该学院的网站，跳转的页面有提供网址但是得手动点
+北京协和医学院,Peking Union Medical College,北京,医1,"北京市东城区东单三条9号
+",https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E5%8D%8F%E5%92%8C%E5%8C%BB%E5%AD%A6%E9%99%A2,https://www.pumc.edu.cn/yxgk/zzjg/jyxt/index.htm,网页最下面的学院点击进去能跳转到学院的连接
+山东大学,Shandong University,山东,22,"山东省历城区山大南路27号
+",https://baike.baidu.com/item/%E5%B1%B1%E4%B8%9C%E5%A4%A7%E5%AD%A6,https://www.sdu.edu.cn/jgsz/xysz.htm,
+中南大学,Central South University,湖南,23,"湖南省长沙市岳麓区麓山南路932号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%8D%97%E5%A4%A7%E5%AD%A6,https://www.csu.edu.cn/zjzn/jgsz.htm,
+厦门大学,Xiamen University,福建,24,"厦门市思明区思明南路422号
+",https://baike.baidu.com/item/%E5%8E%A6%E9%97%A8%E5%A4%A7%E5%AD%A6,https://www.xmu.edu.cn/xbyx/rwyysxb.htm,按不同的学部网址的后缀会有点不一样
+西北工业大学,Northwestern Polytechnical University,陕西,25,"陕西省西安市碑林区友谊西路127号
+",https://baike.baidu.com/item/%E8%A5%BF%E5%8C%97%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.nwpu.edu.cn/jgsz_cd_/jxkyjg/xy_xb.htm,
+华南理工大学,South China University of Technology,广东,26,"广东省广州市天河区五山路381号
+",https://baike.baidu.com/item/%E5%8D%8E%E5%8D%97%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6,https://www.scut.edu.cn/new/8996/list.htm,
+吉林大学,Jilin University,吉林,27,"吉林省长春市朝阳区前进大街2699号
+",https://baike.baidu.com/item/%E5%90%89%E6%9E%97%E5%A4%A7%E5%AD%A6,https://www.jlu.edu.cn/jgsz/yxsz.htm,
+电子科技大学,University of Electronic Science and Technology of China,四川,28,"四川省成都市高新区（西区）西源大道2006号
+",https://baike.baidu.com/item/%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6,https://www.uestc.edu.cn/db43a9991ac59e09f0e738c16cf59a6d.html?n=8e7z368tn51,
+湖南大学,Hunan University,湖南,29,"南校区：湖南省长沙市岳麓区麓山南路2号
+",https://baike.baidu.com/item/%E6%B9%96%E5%8D%97%E5%A4%A7%E5%AD%A6,https://www.hnu.edu.cn/xyxk.htm,
+中国农业大学,China Agricultural University,北京,30,"海淀区圆明园西路2号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E5%86%9C%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.cau.edu.cn/xybm/index.htm,
+华东师范大学,East China Normal University,上海,31,"中山北路3663号
+",https://baike.baidu.com/item/%E5%8D%8E%E4%B8%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,https://www.ecnu.edu.cn/wzcd/xxgk/yxsz.htm,
+大连理工大学,Dalian University of Technology,辽宁,32,"甘井子区凌工路2号
+",https://baike.baidu.com/item/%E5%A4%A7%E8%BF%9E%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6,https://www.dlut.edu.cn/xbyx/dllszxq.htm,分了三个校区的然后不同的校区有不同的院系
+南方科技大学,Southern University of Science and Technology,广东,33,"广东省深圳市南山区学苑大道1088号
+",https://baike.baidu.com/item/%E5%8D%97%E6%96%B9%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6,https://www.sustech.edu.cn/zh/college.html,
+重庆大学,Chongqing University,重庆,34,"重庆市沙坪坝区沙正街174号
+",https://baike.baidu.com/item/%E9%87%8D%E5%BA%86%E5%A4%A7%E5%AD%A6,https://www.cqu.edu.cn/jgsz/jxkyjg.htm,
+上海财经大学,Shanghai University of Finance and Economics,上海,财1,"上海市杨浦区国定路777号
+",https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7%E8%B4%A2%E7%BB%8F%E5%A4%A7%E5%AD%A6,https://www.sufe.edu.cn/11/list.htm,
+北京科技大学,University of Science and Technology Beijing,北京,35,"海淀区学院路30号
+",https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6,https://www.ustb.edu.cn/yxbm/index.htm?mao=p01,
+南京理工大学,Nanjing University of Science and Technology,江苏,36,"江苏省南京市玄武区孝陵卫街道孝陵卫街200号
+",https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6,https://www.njust.edu.cn/xy_12838/list.htm,
+南京航空航天大学,Nanjing University of Aeronautics and Astronautics,江苏,37,"江苏省南京市御道街29号 
+",https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9%E5%A4%A7%E5%AD%A6,https://www.nuaa.edu.cn/xysz/list.htm,
+东北大学,Northeastern University,辽宁,38,"辽宁省沈阳市和平区文化路3巷11号
+",https://baike.baidu.com/item/%E4%B8%9C%E5%8C%97%E5%A4%A7%E5%AD%A6,https://www.neu.edu.cn/zzjg.htm#yxsz,
+西安电子科技大学,Xidian University,陕西,39,"陕西省西安市雁塔区太白南路2号
+",https://baike.baidu.com/item/%E8%A5%BF%E5%AE%89%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6,https://www.xidian.edu.cn/jgsz.htm,
+兰州大学,Lanzhou University,甘肃,40,"甘肃省兰州市天水南路222号 
+",https://baike.baidu.com/item/%E5%85%B0%E5%B7%9E%E5%A4%A7%E5%AD%A6,https://zsb.lzu.edu.cn/xueyuandaohang/index.html,只有在本科生招生网上才找到院系
+苏州大学,Soochow University (China),江苏,40,"江苏省苏州市姑苏区干将东路333号
+",https://baike.baidu.com/item/%E8%8B%8F%E5%B7%9E%E5%A4%A7%E5%AD%A6,https://www.suda.edu.cn/branch_setting/ybsz.jsp,
+华中农业大学,Huazhong Agricultural University,湖北,42,"湖北省武汉市洪山区狮子山街1号
+",https://baike.baidu.com/item/%E5%8D%8E%E4%B8%AD%E5%86%9C%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.hzau.edu.cn/xxgk/yxsz.htm,
+北京交通大学,Beijing jiaotong University,北京,43,"北京市西直门外上园村3号
+",https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6,https://www.bjtu.edu.cn/,学院官网的院系设置直接弹出院系表单，点击就是不同学院的网站
+华东理工大学,East China University of Science and Technology,上海,44,"上海市徐汇区梅陇路130号
+",https://baike.baidu.com/item/%E5%8D%8E%E4%B8%9C%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6,https://www.ecust.edu.cn/595/list.htm,学院官网的院系设置直接弹出院系表单，点击就是不同学院的网站
+上海科技大学,ShanghaiTech University,上海,45,"上海市浦东新区华夏中路393号
+",https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6,https://www.shanghaitech.edu.cn/#,
+首都医科大学,Capital Medical University,北京,医2,"丰台区右安门外西头条10号
+",https://baike.baidu.com/item/%E9%A6%96%E9%83%BD%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6,https://www.ccmu.edu.cn/yxbs_6451/xyjxb_6452/index.htm,
+郑州大学,Zhengzhou University,河南,46,"主校区：河南省郑州市高新区科学大道100号
+",https://baike.baidu.com/item/%E9%83%91%E5%B7%9E%E5%A4%A7%E5%AD%A6,http://www.zzu.edu.cn/yxzy/wkyx1.htm,按不同的学部网址的后缀会有点不一样
+中央财经大学,Central University of Finance and Economics,北京,财2,"北京市海淀区学院南路39号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%A4%AE%E8%B4%A2%E7%BB%8F%E5%A4%A7%E5%AD%A6,https://www.cufe.edu.cn/zzjg/xysz.htm,
+华中师范大学,Central China Normal University,湖北,47,"湖北省武汉市洪山区珞喻路152号
+",https://baike.baidu.com/item/%E5%8D%8E%E4%B8%AD%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,https://zs.ccnu.edu.cn/zyxl.htm,只有在本科生招生网上才找到院系，但是院系无法直接跳转网站而是要手动点网站的连接才能跳转
+上海大学,Shanghai University,上海,48,"上海市上大路99号
+",https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6,https://www.shu.edu.cn/yxsz.htm,
+南京医科大学,Nanjing Medical University,江苏,医3,"江苏省南京市汉中路140号
+",https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6,https://www.njmu.edu.cn/574/list.htm,
+哈尔滨工程大学,Harbin Engineering University,黑龙江,49,"黑龙江省哈尔滨市南岗区南通大街145号
+",https://baike.baidu.com/item/%E5%93%88%E5%B0%94%E6%BB%A8%E5%B7%A5%E7%A8%8B%E5%A4%A7%E5%AD%A6,http://www.hrbeu.edu.cn/zzjg/jxkydw1.htm,
+南方医科大学,Southern Medical University,广东,医4,"广东省广州市白云区沙太南路1023号-1063号
+",https://baike.baidu.com/item/%E5%8D%97%E6%96%B9%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6,https://www.smu.edu.cn/#,学院官网的学校机构->教学机构-直接弹出院系表单，点击就是不同学院的网站
+暨南大学,Jinan University,广东,50,"广东省广州市黄埔大道西601号
+",https://baike.baidu.com/item/%E6%9A%A8%E5%8D%97%E5%A4%A7%E5%AD%A6,https://www.jnu.edu.cn/35777/list.htm,
+中国政法大学,China University of Political Science and Law,北京,政1,"北京市昌平区府学路27号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E6%94%BF%E6%B3%95%E5%A4%A7%E5%AD%A6,https://www.cupl.edu.cn/jxjg1.htm,
+南京农业大学,Nanjing Agricultural University,江苏,51,"江苏省南京市玄武区卫岗1号
+",https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E5%86%9C%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.njau.edu.cn/#,导航栏显示
+对外经济贸易大学,University of International Business and Economics,北京,财3,"北京市朝阳区惠新东街10号
+",https://baike.baidu.com/item/%E5%AF%B9%E5%A4%96%E7%BB%8F%E6%B5%8E%E8%B4%B8%E6%98%93%E5%A4%A7%E5%AD%A6,https://www.uibe.edu.cn/xysz/index.htm,
+中国石油大学（北京）,China University of Petroleum - Beijing,北京,52,"北京市昌平区府学路18号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E7%9F%B3%E6%B2%B9%E5%A4%A7%E5%AD%A6%EF%BC%88%E5%8C%97%E4%BA%AC%EF%BC%89,https://www.cup.edu.cn/yuanxi/index.htm,
+东北师范大学,Northeast Normal University,吉林,53,"吉林省长春市南关区人民大街5268号
+",https://baike.baidu.com/item/%E4%B8%9C%E5%8C%97%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,https://www.nenu.edu.cn/zzjg.htm,
+武汉理工大学,Wuhan University of Technology,湖北,54,"湖北省武汉市洪山区珞狮路122号
+",https://baike.baidu.com/item/%E6%AD%A6%E6%B1%89%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6,https://www.whut.edu.cn/xxgk/xysz/,
+西南交通大学,Southwest Jiaotong University,四川,55,"中国四川省成都市郫都区犀安路999号 
+",https://baike.baidu.com/item/%E8%A5%BF%E5%8D%97%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6,https://www.swjtu.edu.cn/xysz_/xy.htm,
+中国矿业大学,China University of Mining and Technology - Xuzhou,江苏,56,"江苏省大学路1号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E7%9F%BF%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.cumt.edu.cn/#,导航栏显示
+北京邮电大学,Beijing University of Posts and Telecommunications,北京,57,"北京市海淀区西土城路10号
+",https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E9%82%AE%E7%94%B5%E5%A4%A7%E5%AD%A6,https://www.bupt.edu.cn/yxjg1.htm,
+香港中文大学（深圳）,"The Chinese University of Hong Kong, Shenzhen",广东,合作1,"广东省深圳市龙岗区龙翔大道2001号
+",https://baike.baidu.com/item/%E9%A6%99%E6%B8%AF%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%A6%EF%BC%88%E6%B7%B1%E5%9C%B3%EF%BC%89,https://www.cuhk.edu.cn/zh-hans/academics,
+南京师范大学,Nanjing Normal University,江苏,58,"江苏省南京市栖霞区仙林大学城文苑路1号
+",https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,https://www.njnu.edu.cn/xysz.htm,
+中国地质大学（武汉）,China University of Geosciences (Wuhan),湖北,59,"湖北省洪山区鲁磨路388号
+", https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E5%9C%B0%E8%B4%A8%E5%A4%A7%E5%AD%A6%EF%BC%88%E6%AD%A6%E6%B1%89%EF%BC%89,https://www.cug.edu.cn/zzjg1/jxkyjg.htm,
+江南大学,Jiangnan University,江苏,60,"江苏省无锡市滨湖区蠡湖大道1800号
+",江南大学 https://baike.baidu.com/item/%E6%B1%9F%E5%8D%97%E5%A4%A7%E5%AD%A6,https://www.jiangnan.edu.cn/xxjg/xydh1.htm,
+河海大学,Hohai University,江苏,61,"江苏省南京市西康路1号 
+",https://baike.baidu.com/item/%E6%B2%B3%E6%B5%B7%E5%A4%A7%E5%AD%A6,https://www.hhu.edu.cn/191/list.htm,
+中国海洋大学,Ocean University of China,山东,62,"山东省青岛市松岭路238号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E6%B5%B7%E6%B4%8B%E5%A4%A7%E5%AD%A6,https://www.ouc.edu.cn/bmsz/list.htm,
+北京工业大学,Beijing University of Technology,北京,63,"北京市朝阳区平乐园100号
+",https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.bjut.edu.cn/jgsz/jxkyjg.htm,
+哈尔滨医科大学,Harbin Medical University,黑龙江,医5,"黑龙江省哈尔滨市南岗区保健路157号
+",https://baike.baidu.com/item/%E5%93%88%E5%B0%94%E6%BB%A8%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6,https://www.hrbmu.edu.cn/yxbm.htm,
+北京化工大学,Beijing University of Chemical Technology,北京,64,"北京市朝阳区北三环东路15号
+",https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E5%8C%96%E5%B7%A5%E5%A4%A7%E5%AD%A6,https://www.buct.edu.cn/xysz_11517/list.htm,
+西北大学,Northwest University,陕西,65,"陕西省西安市碑林区太白北路229号
+",https://baike.baidu.com/item/%E8%A5%BF%E5%8C%97%E5%A4%A7%E5%AD%A6,https://www.nwu.edu.cn/jgsz/yxsz.htm,
+西南财经大学,Southwestern University of Finance and Economics,四川,财4,"成都市光华村街55号
+",https://baike.baidu.com/item/%E8%A5%BF%E5%8D%97%E8%B4%A2%E7%BB%8F%E5%A4%A7%E5%AD%A6,https://www.swufe.edu.cn/xy_yjy_.htm,
+中国石油大学（华东）,China University of Petroleum (Huadong),山东,66,"山东省青岛市黄岛区长江西路66号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E7%9F%B3%E6%B2%B9%E5%A4%A7%E5%AD%A6%EF%BC%88%E5%8D%8E%E4%B8%9C%EF%BC%89,https://www.upc.edu.cn/jxyb1.htm,
+陕西师范大学,Shaanxi Normal University,陕西,67,"陕西省西安市雁塔区长安南路199号
+",https://baike.baidu.com/item/%E9%99%95%E8%A5%BF%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,https://www.snnu.edu.cn/xxgk/jgsz/jxkydw/jxdw.htm,
+天津医科大学,Tianjin Medical University,天津,医6,"天津市和平区气象台路22号
+",https://baike.baidu.com/item/%E5%A4%A9%E6%B4%A5%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6,http://www.tmu.edu.cn/39/list.htm,
+中南财经政法大学,Zhongnan University of Economics and Law,湖北,财5,"湖北省武汉市武昌区武珞路114号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%8D%97%E8%B4%A2%E7%BB%8F%E6%94%BF%E6%B3%95%E5%A4%A7%E5%AD%A6,https://www.zuel.edu.cn/schools/,
+深圳大学,Shenzhen University,广东,68,"广东省深圳市南山区南海大道3688号
+",https://baike.baidu.com/item/%E6%B7%B1%E5%9C%B3%E5%A4%A7%E5%AD%A6,https://www.szu.edu.cn/yxjg/xbxy.htm,
+南昌大学,Nanchang University,江西,69,"南昌市红谷滩新区学府大道999号
+",https://baike.baidu.com/item/%E5%8D%97%E6%98%8C%E5%A4%A7%E5%AD%A6,https://www.ncu.edu.cn/xyyxk/xysz.htm,
+浙江工业大学,Zhejiang University of Technology,浙江,70,"浙江省杭州市拱墅区潮王路18号
+",https://baike.baidu.com/item/%E6%B5%99%E6%B1%9F%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.zjut.edu.cn/4485/list.htm,
+中国医科大学,China Medical University (Shenyang),辽宁,医7,"辽宁省沈阳市沈北新区蒲河路77号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6,https://www.cmu.edu.cn/yxsz.htm,
+中国地质大学（北京）,China University of Geosciences (Beijing),北京,71,"北京市海淀区学院路29号
+", https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E5%9C%B0%E8%B4%A8%E5%A4%A7%E5%AD%A6%EF%BC%88%E5%8C%97%E4%BA%AC%EF%BC%89,https://www.cugb.edu.cn/jxdw.jhtml,
+西南大学,Southwest University,重庆,72,"重庆市天生路2号
+",西南大学 https://baike.baidu.com/item/%E8%A5%BF%E5%8D%97%E5%A4%A7%E5%AD%A6,http://www.swu.edu.cn/glfw_jxdw.html,
+福州大学,Fuzhou University,福建,73,"福建省福州市福州地区大学新区学园路2号
+",https://baike.baidu.com/item/%E7%A6%8F%E5%B7%9E%E5%A4%A7%E5%AD%A6,https://www.fzu.edu.cn/xysz.htm,
+西北农林科技大学,Northwest A&F University,陕西,74,"陕西省咸阳市杨凌示范区邰城路3号
+",https://baike.baidu.com/item/%E8%A5%BF%E5%8C%97%E5%86%9C%E6%9E%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6,https://www.nwsuaf.edu.cn/xxsw/index.htm,
+华北电力大学,North China Electric Power University,北京,75,"北京市昌平区回龙观街道北农路2号
+",https://baike.baidu.com/item/%E5%8D%8E%E5%8C%97%E7%94%B5%E5%8A%9B%E5%A4%A7%E5%AD%A6,https://www.ncepu.edu.cn/zzjg/yxsz/index.htm,
+中国矿业大学（北京）,China University of Mining and Technology - Beijing,北京,76,"北京市海淀区学院路丁11号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E7%9F%BF%E4%B8%9A%E5%A4%A7%E5%AD%A6%EF%BC%88%E5%8C%97%E4%BA%AC%EF%BC%89,https://www.cumtb.edu.cn/xysz.htm,
+东华大学,Donghua University,上海,77,"上海市延安西路1882号
+",https://baike.baidu.com/item/%E4%B8%9C%E5%8D%8E%E5%A4%A7%E5%AD%A6,https://www.dhu.edu.cn/,导航栏显示
+江苏大学,Jiangsu University,江苏,78,"江苏省镇江市京口区象山街道学府路301号
+",https://baike.baidu.com/item/%E6%B1%9F%E8%8B%8F%E5%A4%A7%E5%AD%A6,https://www.ujs.edu.cn/jgsz.htm#jxjg,
+华南师范大学,South China Normal University,广东,79,"广东省广州市中山大道西55号
+",https://baike.baidu.com/item/%E5%8D%8E%E5%8D%97%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,https://www.scnu.edu.cn/a/20151026/29.html,
+云南大学,Yunnan University,云南,80,"云南省昆明市呈贡区大学城东外环南路 
+",https://baike.baidu.com/item/%E4%BA%91%E5%8D%97%E5%A4%A7%E5%AD%A6,https://www.ynu.edu.cn/jgsz/jxkydw.htm,
+北京外国语大学,Beijing Foreign Studies University,北京,语1,"北京市海淀区西三环北路2号
+",https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E5%A4%96%E5%9B%BD%E8%AF%AD%E5%A4%A7%E5%AD%A6,https://www.bfsu.edu.cn/alldeps,
+扬州大学,Yangzhou University,江苏,81,"江苏省扬州市大学南路
+",https://baike.baidu.com/item/%E6%89%AC%E5%B7%9E%E5%A4%A7%E5%AD%A6,https://www.yzu.edu.cn/xybm/jxjg.htm,
+北京林业大学,Beijing Forestry University,北京,82,"中国北京市海淀区清华东路35号
+",https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E6%9E%97%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.bjfu.edu.cn/ybsz/index.htm,
+中国传媒大学,Communication University of China,北京,语2,"北京市朝阳区定福庄东街1号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E5%AA%92%E5%A4%A7%E5%AD%A6,https://www.cuc.edu.cn/jxdw/list.htm,
+合肥工业大学,Hefei University of Technology,安徽,83,"安徽省合肥市包河区屯溪路193号
+",https://baike.baidu.com/item/%E5%90%88%E8%82%A5%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.hfut.edu.cn/jgsz/yxsz1.htm,
+北京中医药大学,Beijing University of Chinese Medicine,北京,医8,"北京市朝阳区北三环东路11号
+",https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E4%B8%AD%E5%8C%BB%E8%8D%AF%E5%A4%A7%E5%AD%A6,https://www.bucm.edu.cn/zzjg1/jxjg1/index.htm,
+宁波大学,Ningbo University,浙江,84,"浙江省宁波市江北区风华路818号
+",https://baike.baidu.com/item/%E5%AE%81%E6%B3%A2%E5%A4%A7%E5%AD%A6,https://www.nbu.edu.cn/xxjg1/xy.htm,
+南京工业大学,Nanjing Tech University,江苏,85,"江苏省南京市江北新区浦珠南路30号
+",https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.njtech.edu.cn/jgsz/xy.htm,
+南京邮电大学,Nanjing University of Posts and Telecommunications,江苏,86,"江苏省南京市仙林大学城文苑路9号
+",https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E9%82%AE%E7%94%B5%E5%A4%A7%E5%AD%A6,https://www.njupt.edu.cn/jxjg/list.htm,
+湖南师范大学,Hunan Normal University,湖南,87,"湖南省长沙市岳麓区麓山路36号
+",https://baike.baidu.com/item/%E6%B9%96%E5%8D%97%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,https://www.hunnu.edu.cn/xxjg/xysz.htm,
+长安大学,Chang'an University,陕西,88,"陕西省西安市未央区尚苑路
+",https://baike.baidu.com/item/%E9%95%BF%E5%AE%89%E5%A4%A7%E5%AD%A6,https://www.chd.edu.cn/jgsz.htm,
+首都师范大学,Capital Normal University,北京,89,"北京市海淀区西三环北路105号
+",https://baike.baidu.com/item/%E9%A6%96%E9%83%BD%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,https://www.cnu.edu.cn/jgsz/index.htm?mao=b02,
+南京信息工程大学,Nanjing University of Information Science & Technology,江苏,90,"江苏省南京市江北新区宁六路219号
+",https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%A4%A7%E5%AD%A6,https://www.nuist.edu.cn/875/list.htm#list-3,
+杭州电子科技大学,Hangzhou Dianzi University,浙江,91,"浙江省杭州市杭州经济开发区白杨街道2号大街1158号
+",https://baike.baidu.com/item/%E6%9D%AD%E5%B7%9E%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6,https://www.hdu.edu.cn/763/list.htm,
+湘潭大学,Xiangtan University,湖南,92,"湖南省湘潭市雨湖区北二环
+",https://baike.baidu.com/item/%E6%B9%98%E6%BD%AD%E5%A4%A7%E5%AD%A6,https://www.xtu.edu.cn/jgsz1/xyb.htm,
+华南农业大学,South China Agricultural University,广东,93,"广东省广州市天河区五山483号
+",https://baike.baidu.com/item/%E5%8D%8E%E5%8D%97%E5%86%9C%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.scau.edu.cn/1601/list.htm,
+温州医科大学,Wenzhou Medical University,浙江,医9,"浙江省温州市鹿城区学院西路268号
+",https://baike.baidu.com/item/%E6%B8%A9%E5%B7%9E%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6,https://www.wmu.edu.cn/jgsz/xzxt.htm,
+燕山大学,Yanshan University,河北,94,"河北省秦皇岛市海港区河北大街西段438号
+",https://baike.baidu.com/item/%E7%87%95%E5%B1%B1%E5%A4%A7%E5%AD%A6,https://www.ysu.edu.cn/yxsz.htm,
+福建师范大学,Fujian Normal University,福建,95,"福建省福州市仓山区上三路8号
+",https://baike.baidu.com/item/%E7%A6%8F%E5%BB%BA%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,https://www.fjnu.edu.cn/24/list.htm,
+广西大学,Guangxi University,广西,96,"广西南宁市大学东路100号
+",https://baike.baidu.com/item/%E5%B9%BF%E8%A5%BF%E5%A4%A7%E5%AD%A6,https://www.gxu.edu.cn/jgsz2.htm,
+中国药科大学,China Pharmaceutical University,江苏,医10,"江苏省南京市鼓楼区童家巷24号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E8%8D%AF%E7%A7%91%E5%A4%A7%E5%AD%A6,https://www.cmu.edu.cn/yxsz.htm,
+广州大学,Guangzhou University,广东,97,"广东省广州市大学城外环西路230号
+",https://baike.baidu.com/item/%E5%B9%BF%E5%B7%9E%E5%A4%A7%E5%AD%A6,https://www.gzhu.edu.cn/zzjg/xy_b_.htm,
+上海外国语大学,Shanghai International Studies University,上海,语3,"上海市大连西路550号
+",https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7%E5%A4%96%E5%9B%BD%E8%AF%AD%E5%A4%A7%E5%AD%A6,https://www.shisu.edu.cn/academics/schools-and-departments/index.html,
+上海中医药大学,Shanghai University of Traditional Chinese Medicine,上海,医11,"上海市浦东新区蔡伦路1200号
+",https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7%E4%B8%AD%E5%8C%BB%E8%8D%AF%E5%A4%A7%E5%AD%A6,https://www.shutcm.edu.cn/ejxy/list.htm,
+河南大学,Henan University,河南,98,"河南省郑州市郑东新区明理路北段379号
+",https://baike.baidu.com/item/%E6%B2%B3%E5%8D%97%E5%A4%A7%E5%AD%A6,https://www.henu.edu.cn/jgsz/yxbm.htm,
+大连海事大学,Dalian Maritime University,辽宁,99,"辽宁省大连市凌海路1号
+",https://baike.baidu.com/item/%E5%A4%A7%E8%BF%9E%E6%B5%B7%E4%BA%8B%E5%A4%A7%E5%AD%A6,https://www.dlmu.edu.cn/xxgk/jgsz/yxsz.htm,
+浙江师范大学,Zhejiang Normal University,浙江,100,"浙江省迎宾大道688号
+",https://baike.baidu.com/item/%E6%B5%99%E6%B1%9F%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,https://www.zjnu.edu.cn/4000/list.htm,
+重庆医科大学,Chongqing Medical University,重庆,医12,"重庆市医学院路1号
+",https://baike.baidu.com/item/%E9%87%8D%E5%BA%86%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6,https://www.cqmu.edu.cn/jgsz.htm#org3,
+广东工业大学,Guangdong University of Technology,广东,101,"广东省广州市番禺区小谷围街广州大学城外环西路100号
+",https://baike.baidu.com/item/%E5%B9%BF%E4%B8%9C%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.gdut.edu.cn/jgsz/jxjg.htm,
+广州医科大学,Guangzhou Medical University,广东,医13,"广东省广州市越秀区东风西路 195 号
+",https://baike.baidu.com/item/%E5%B9%BF%E5%B7%9E%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6,https://www.gdmu.edu.cn/jgsz/jxjg1.htm,
+上海理工大学,University of Shanghai for Science and Technology,上海,102,"上海市杨浦区军工路516号
+",https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6,https://www.usst.edu.cn/main.htm#page1,按下菜单-导航栏显示
+东北财经大学,Dongbei University of Finance and Economics,辽宁,财6,"辽宁省大连市沙河口区尖山街217号
+",https://baike.baidu.com/item/%E4%B8%9C%E5%8C%97%E8%B4%A2%E7%BB%8F%E5%A4%A7%E5%AD%A6,https://www.dufe.edu.cn/yxsz/,
+上海纽约大学,New York University Shanghai,上海,合作2,"上海市浦东新区杨思西路567号
+",https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7%E7%BA%BD%E7%BA%A6%E5%A4%A7%E5%AD%A6,https://shanghai.nyu.edu/cn/academics/majors,
+山西大学,Shanxi University,山西,103,"太原市坞城路92号
+",https://baike.baidu.com/item/%E5%B1%B1%E8%A5%BF%E5%A4%A7%E5%AD%A6,https://www.sxu.edu.cn/xxgk/jgsz/yxsz/index.html,
+外交学院,China Foreign Affairs University,北京,语4,"北京市西城区展览馆路24号
+",https://baike.baidu.com/item/%E5%A4%96%E4%BA%A4%E5%AD%A6%E9%99%A2,https://www.cfau.edu.cn/col2843/index.htm,
+安徽大学,Anhui University,安徽,104,"安徽省合肥市经济技术开发区九龙路111号
+",https://baike.baidu.com/item/%E5%AE%89%E5%BE%BD%E5%A4%A7%E5%AD%A6,https://www.ahu.edu.cn/183/list.htm,
+中央民族大学,Minzu University of China,北京,民1,"北京市海淀区中关村南大街27号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%A4%AE%E6%B0%91%E6%97%8F%E5%A4%A7%E5%AD%A6,https://www.muc.edu.cn/zzjg/jxhkydw1.htm,
+山东师范大学,Shandong Normal University,山东,105,"山东省济南市历下区文化东路88号
+",https://baike.baidu.com/item/%E5%B1%B1%E4%B8%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,https://www.sdnu.edu.cn/overview/organization.htm,
+河北工业大学,Hebei University of Technology,河北,106,"天津市北辰区西平道5340号
+",https://baike.baidu.com/item/%E6%B2%B3%E5%8C%97%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.hebut.edu.cn/jgsz1/yxsz/index.htm,
+青岛大学,Qingdao University,山东,107,"山东省青岛市宁夏路308号
+",https://baike.baidu.com/item/%E9%9D%92%E5%B2%9B%E5%A4%A7%E5%AD%A6,https://www.qdu.edu.cn/jgsz/xyxb.htm,
+太原理工大学,Taiyuan University of Technology,山西,107,"山西省太原市迎泽西大街79号
+",https://baike.baidu.com/item/%E5%A4%AA%E5%8E%9F%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6,https://www.tyut.edu.cn/xxjg.htm#box5,
+贵州大学,Guizhou University,贵州,109,"贵州省贵阳市花溪区花溪大道南段2708号
+",https://baike.baidu.com/item/%E8%B4%B5%E5%B7%9E%E5%A4%A7%E5%AD%A6,https://www.gzu.edu.cn/49/list.htm,
+南京林业大学,Nanjing Forestry University,江苏,110,"江苏省南京市玄武区龙蟠路159号
+",https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E6%9E%97%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.njfu.edu.cn/nlgk/xxjj/index.html,导航栏显示
+上海师范大学,Shanghai Normal University,上海,111,"上海市徐汇区桂林路100号
+",https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,https://www.shnu.edu.cn/25/list.htm,
+武汉科技大学,Wuhan University of Science and Technology,湖北,111,"湖北省武汉市青山区和平大道947号
+",https://baike.baidu.com/item/%E6%AD%A6%E6%B1%89%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6,https://www.wust.edu.cn/xxgk/yxsz.htm,
+内蒙古大学,Inner Mongolia University,内蒙古,113,"内蒙古自治区呼和浩特市赛罕区大学西街235号
+",https://baike.baidu.com/item/%E5%86%85%E8%92%99%E5%8F%A4%E5%A4%A7%E5%AD%A6,https://www.imu.edu.cn/jgsz1/jxkydw.htm,
+浙江理工大学,Zhejiang Sci-Tech University,浙江,114,"浙江省杭州市钱塘区下沙高教园区2号大街928号
+",https://baike.baidu.com/item/%E6%B5%99%E6%B1%9F%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6,https://www.zstu.edu.cn/xxgk/yxsz.htm,
+东北林业大学,Northeast Forestry University - China,黑龙江,115,"黑龙江省哈尔滨市香坊区和兴路26号
+",https://baike.baidu.com/item/%E4%B8%9C%E5%8C%97%E6%9E%97%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.nefu.edu.cn/zzjg1/jxdw.htm,
+福建农林大学,Fujian Agriculture and Forestry University,福建,116,"福建省福州市仓山区上下店路15号
+",https://baike.baidu.com/item/%E7%A6%8F%E5%BB%BA%E5%86%9C%E6%9E%97%E5%A4%A7%E5%AD%A6,https://www.fafu.edu.cn/5255/list.htm,
+江西财经大学,Jiangxi University of Finance & Economics,江西,财7,"江西省南昌市昌北经济技术开发区双港东大街169号
+",https://baike.baidu.com/item/%E6%B1%9F%E8%A5%BF%E8%B4%A2%E7%BB%8F%E5%A4%A7%E5%AD%A6,https://www.jxufe.edu.cn/news-show-50.html,
+宁波诺丁汉大学,University of Nottingham Ningbo China,浙江,合作3,"浙江省宁波市泰康东路199号
+",https://baike.baidu.com/item/%E5%AE%81%E6%B3%A2%E8%AF%BA%E4%B8%81%E6%B1%89%E5%A4%A7%E5%AD%A6,https://www.nottingham.edu.cn/cn/schools-departments/directory.aspx,
+西安理工大学,Xi'an University of Technology,陕西,117,"陕西省西安市碑林区金花南路5号
+",https://baike.baidu.com/item/%E8%A5%BF%E5%AE%89%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6,https://www.xaut.edu.cn/zzjg/yxsz.htm,
+海南大学,Hainan University,海南,118,"海南省海口市美兰区人民大道58号
+",https://baike.baidu.com/item/%E6%B5%B7%E5%8D%97%E5%A4%A7%E5%AD%A6,https://www.hainanu.edu.cn/jgsz1/jxdw.htm,
+江西师范大学,Jiangxi Normal University,江西,119,"江西省南昌市紫阳大道99号
+",https://baike.baidu.com/item/%E6%B1%9F%E8%A5%BF%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,https://www.jxnu.edu.cn/51/list.htm,
+东北农业大学,Northeast Agricultural University - China,黑龙江,120,"中国哈尔滨香坊区长江路600号
+",https://baike.baidu.com/item/%E4%B8%9C%E5%8C%97%E5%86%9C%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.neau.edu.cn/jgsz/yxsz.htm,
+河北医科大学,Hebei Medical University,河北,医14,"河北省石家庄市中山东路361号
+",https://baike.baidu.com/item/%E6%B2%B3%E5%8C%97%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6,https://www.hebmu.edu.cn/a/zzjg/zzjg/,
+长沙理工大学,Changsha University of Science and Technology,湖南,121,"湖南省长沙市天心区万家丽南路二段960号
+",https://baike.baidu.com/item/%E9%95%BF%E6%B2%99%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6,https://www.csust.edu.cn/jgsz/jxy.htm,
+西安建筑科技大学,Xi'an University of Architecture and Technology,陕西,122,"陕西省西安市碑林区雁塔路中段13号
+",https://baike.baidu.com/item/%E8%A5%BF%E5%AE%89%E5%BB%BA%E7%AD%91%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6,https://www.xauat.edu.cn/zh-cn/html/03yxsz/index.html,
+湖北大学,Hubei University,湖北,123,"湖北省武汉市武昌区友谊大道368号
+",https://baike.baidu.com/item/%E6%B9%96%E5%8C%97%E5%A4%A7%E5%AD%A6,https://www.hubu.edu.cn/zzjg/xysz.htm,
+南京中医药大学,Nanjing University of Chinese Medicine,江苏,医15,"江苏省南京市汉中路282号
+",https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E4%B8%AD%E5%8C%BB%E8%8D%AF%E5%A4%A7%E5%AD%A6,https://www.njucm.edu.cn/6732/list.htm#,
+昆明理工大学,Kunming University of Science and Technology,云南,124,"云南省昆明市呈贡区景明南路727号
+",https://baike.baidu.com/item/%E6%98%86%E6%98%8E%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6,https://www.kmust.edu.cn/xxgk/jgsz1.htm,
+江苏师范大学,Jiangsu Normal University,江苏,125,"江苏省徐州市铜山新区上海路101号
+",https://baike.baidu.com/item/%E6%B1%9F%E8%8B%8F%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,http://www.jsnu.edu.cn/75/list.htm,
+大连医科大学,Dalian Medical University,辽宁,医16,"辽宁省大连市旅顺南路西段9号
+",https://baike.baidu.com/item/%E5%A4%A7%E8%BF%9E%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6,https://www.dmu.edu.cn/zzjg/jxkyjg.htm,
+首都经济贸易大学,Capital University of Economics & Business,北京,财8,"北京市丰台区花乡张家路口121号
+",https://baike.baidu.com/item/%E9%A6%96%E9%83%BD%E7%BB%8F%E6%B5%8E%E8%B4%B8%E6%98%93%E5%A4%A7%E5%AD%A6,https://www.cueb.edu.cn/xxgk/zzjg/index.htm,
+山东科技大学,Shandong University of Science and Technology,山东,126,"山东省青岛市黄岛区前湾港路579号
+",https://baike.baidu.com/item/%E5%B1%B1%E4%B8%9C%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6,https://www.sdust.edu.cn/zzjg/jxdw.htm,
+辽宁大学,Liaoning University,辽宁,127,"辽宁省沈阳市皇姑区崇山中路66号
+",https://baike.baidu.com/item/%E8%BE%BD%E5%AE%81%E5%A4%A7%E5%AD%A6,https://www.lnu.edu.cn/jgsz/jxjg.htm,
+西南石油大学,Southwest Petroleum University,四川,128,"四川省成都市新都区新都大道8号
+",https://baike.baidu.com/item/%E8%A5%BF%E5%8D%97%E7%9F%B3%E6%B2%B9%E5%A4%A7%E5%AD%A6,https://www.swpu.edu.cn/jgsz/xysz.htm,
+杭州师范大学,Hangzhou Normal University,浙江,129,"浙江省杭州市余杭区仓前街道海曙路58号
+",https://baike.baidu.com/item/%E6%9D%AD%E5%B7%9E%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,https://www.hznu.edu.cn/xxgk/gljg/jhkxcl/,
+河北大学,Hebei University,河北,130,"河北省保定市五四东路180号
+",https://baike.baidu.com/item/%E6%B2%B3%E5%8C%97%E5%A4%A7%E5%AD%A6,https://www.hbu.edu.cn/jgsz/jxjg.htm,
+陕西科技大学,Shaanxi University of Science and Technology,陕西,131,"陕西省西安市未央区大学园区
+",https://baike.baidu.com/item/%E9%99%95%E8%A5%BF%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6,https://www.sust.edu.cn/zzjg/jxdw.htm,
+安徽师范大学,Anhui Normal University,安徽,132,"安徽省芜湖市镜湖区北京东路2号
+",https://baike.baidu.com/item/%E5%AE%89%E5%BE%BD%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6,https://www.ahnu.edu.cn/jgsz/jxdw.htm,
+北京建筑大学,Beijing University of Civil Engineering and Architecture,北京,133,"北京市大兴区黄村镇永源路15号
+",https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E5%BB%BA%E7%AD%91%E5%A4%A7%E5%AD%A6,https://www.bucea.edu.cn/gbjgsz/gbjxkytx/index.htm,
+华侨大学,Huaqiao University,福建,134,"福建省泉州市丰泽区城华北路269号
+",https://baike.baidu.com/item/%E5%8D%8E%E4%BE%A8%E5%A4%A7%E5%AD%A6,https://www.hqu.edu.cn/jgsz/jxky.htm,
+汕头大学,Shantou University,广东,135,"广东省汕头市金平区大学路243号
+",https://baike.baidu.com/item/%E6%B1%95%E5%A4%B4%E5%A4%A7%E5%AD%A6,http://www.stu.edu.cn/jgsz/jxdw.htm,
+华东政法大学,East China University of Political Science and Law,上海,政2,"上海市松江大学园区龙源路555号
+",https://baike.baidu.com/item/%E5%8D%8E%E4%B8%9C%E6%94%BF%E6%B3%95%E5%A4%A7%E5%AD%A6,https://www.ecupl.edu.cn/pzjg/list.htm,
+新疆大学,Xinjiang University,新疆,136,"新疆维吾尔自治区乌鲁木齐市天山区胜利路666号
+",https://baike.baidu.com/item/%E6%96%B0%E7%96%86%E5%A4%A7%E5%AD%A6,https://www.xju.edu.cn/zzjg1.htm,
+江苏科技大学,Jiangsu University of Science and Technology,江苏,137,"江苏省镇江市丹徒新区长晖路666号
+",https://baike.baidu.com/item/%E6%B1%9F%E8%8B%8F%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6,https://www.just.edu.cn/2019/0319/c7670a76327/page.htm,
+石河子大学,Shihezi University,新疆,138,"新疆北四路221号
+",https://baike.baidu.com/item/%E7%9F%B3%E6%B2%B3%E5%AD%90%E5%A4%A7%E5%AD%A6,https://www.shzu.edu.cn/2807/list.htm,
+中国计量大学,China Jiliang University,浙江,139,"浙江省杭州市钱塘区下沙高教园区学源街258号
+",https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E8%AE%A1%E9%87%8F%E5%A4%A7%E5%AD%A6,https://www.cjlu.edu.cn/xxzl1/zzjg.htm,
+北京语言大学,Beijing Language and Culture University,北京,语5,"北京市海淀区学院路15号
+",https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E8%AF%AD%E8%A8%80%E5%A4%A7%E5%AD%A6,https://www.blcu.edu.cn/col/col15723/index.html,
+河南农业大学,Henan Agricultural University,河南,140,"河南省郑州市金水区农业路63号
+",https://baike.baidu.com/item/%E6%B2%B3%E5%8D%97%E5%86%9C%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.henau.edu.cn/jgsz/xysz.htm,
+安徽医科大学,Anhui Medical University,安徽,医17,"安徽省合肥市梅山路81号
+",https://baike.baidu.com/item/%E5%AE%89%E5%BE%BD%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6,https://www.ahmu.edu.cn/4346/list.htm#list-2,
+重庆邮电大学,Chongqing University of Posts and Telecommunications,重庆,141,"重庆市南岸区崇文路2号
+",https://baike.baidu.com/item/%E9%87%8D%E5%BA%86%E9%82%AE%E7%94%B5%E5%A4%A7%E5%AD%A6,https://www.cqupt.edu.cn/xxgk/xydh.htm,
+湖北工业大学,Hubei University of Technology,湖北,142,"湖北省武汉市洪山区南李路28号
+",https://baike.baidu.com/item/%E6%B9%96%E5%8C%97%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.hbut.edu.cn/zzjg/jxdw.htm,
+沈阳农业大学,Shenyang Agricultural University,辽宁,142,"辽宁省沈阳市沈河区东陵路120号
+",https://baike.baidu.com/item/%E6%B2%88%E9%98%B3%E5%86%9C%E4%B8%9A%E5%A4%A7%E5%AD%A6,https://www.syau.edu.cn/xybm/jxkybm.htm,
+四川农业大学,Sichuan Agricultural University,四川,142,"四川省新康路46号
+",https://baike.baidu.com/item/%E5%9B%9B%E5%B7%9D%E5%86%9C%E4%B8%9A%E5%A4%A7%E5%AD%A6,无需跳转，接触显示,
+福建医科大学,Fujian Medical University,福建,医18,"福建省福州市大学新区学府北路1号
+",https://baike.baidu.com/item/%E7%A6%8F%E5%BB%BA%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6,https://www.fjmu.edu.cn/31/list.htm,
+浙江工商大学,Zhejiang Gongshang University,浙江,财9,"浙江省杭州市钱塘区下沙高教园区学正街18号
+",https://baike.baidu.com/item/%E6%B5%99%E6%B1%9F%E5%B7%A5%E5%95%86%E5%A4%A7%E5%AD%A6,https://mypage.zjgsu.edu.cn/xybm/list.htm,

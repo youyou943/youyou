@@ -1,0 +1,8 @@
+[
+    {
+        "chinese_name": "中央民族大学",
+        "english_name": "Minzu University of China",
+        "class_rank": "F",
+        "rank": "民1"
+    }
+]

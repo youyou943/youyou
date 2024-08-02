@@ -1,0 +1,56 @@
+[
+    {
+        "chinese_name": "上海财经大学",
+        "english_name": "Shanghai University of Finance and Economics",
+        "class_rank": "C",
+        "rank": "财1"
+    },
+    {
+        "chinese_name": "中央财经大学",
+        "english_name": "Central University of Finance and Economics",
+        "class_rank": "C",
+        "rank": "财2"
+    },
+    {
+        "chinese_name": "对外经济贸易大学",
+        "english_name": "University of International Business and Economics",
+        "class_rank": "C",
+        "rank": "财3"
+    },
+    {
+        "chinese_name": "西南财经大学",
+        "english_name": "Southwestern University of Finance and Economics",
+        "class_rank": "C",
+        "rank": "财4"
+    },
+    {
+        "chinese_name": "中南财经政法大学",
+        "english_name": "Zhongnan University of Economics and Law",
+        "class_rank": "C",
+        "rank": "财5"
+    },
+    {
+        "chinese_name": "东北财经大学",
+        "english_name": "Dongbei University of Finance and Economics",
+        "class_rank": "C",
+        "rank": "财6"
+    },
+    {
+        "chinese_name": "江西财经大学",
+        "english_name": "Jiangxi University of Finance & Economics",
+        "class_rank": "C",
+        "rank": "财7"
+    },
+    {
+        "chinese_name": "首都经济贸易大学",
+        "english_name": "Capital University of Economics & Business",
+        "class_rank": "C",
+        "rank": "财8"
+    },
+    {
+        "chinese_name": "浙江工商大学",
+        "english_name": "Zhejiang Gongshang University",
+        "class_rank": "C",
+        "rank": "财9"
+    }
+]

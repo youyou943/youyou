@@ -1,0 +1,866 @@
+[
+    {
+        "chinese_name": "清华大学",
+        "english_name": "Tsinghua University",
+        "class_rank": "A",
+        "rank": "1"
+    },
+    {
+        "chinese_name": "北京大学",
+        "english_name": "Peking University",
+        "class_rank": "A",
+        "rank": "2"
+    },
+    {
+        "chinese_name": "浙江大学",
+        "english_name": "Zhejiang University",
+        "class_rank": "A",
+        "rank": "3"
+    },
+    {
+        "chinese_name": "上海交通大学",
+        "english_name": "Shanghai Jiao Tong University",
+        "class_rank": "A",
+        "rank": "4"
+    },
+    {
+        "chinese_name": "复旦大学",
+        "english_name": "Fudan University",
+        "class_rank": "A",
+        "rank": "5"
+    },
+    {
+        "chinese_name": "南京大学",
+        "english_name": "Nanjing University",
+        "class_rank": "A",
+        "rank": "6"
+    },
+    {
+        "chinese_name": "中国科学技术大学",
+        "english_name": "University of Science and Technology of China",
+        "class_rank": "A",
+        "rank": "7"
+    },
+    {
+        "chinese_name": "华中科技大学",
+        "english_name": "Huazhong University of Science and Technology",
+        "class_rank": "A",
+        "rank": "8"
+    },
+    {
+        "chinese_name": "武汉大学",
+        "english_name": "Wuhan University",
+        "class_rank": "A",
+        "rank": "9"
+    },
+    {
+        "chinese_name": "西安交通大学",
+        "english_name": "Xi'an Jiaotong University",
+        "class_rank": "A",
+        "rank": "10"
+    },
+    {
+        "chinese_name": "中山大学",
+        "english_name": "Sun Yat-Sen University",
+        "class_rank": "A",
+        "rank": "11"
+    },
+    {
+        "chinese_name": "四川大学",
+        "english_name": "Sichuan University",
+        "class_rank": "A",
+        "rank": "12"
+    },
+    {
+        "chinese_name": "哈尔滨工业大学",
+        "english_name": "Harbin Institute of Technology",
+        "class_rank": "A",
+        "rank": "13"
+    },
+    {
+        "chinese_name": "北京航空航天大学",
+        "english_name": "Beihang University",
+        "class_rank": "A",
+        "rank": "14"
+    },
+    {
+        "chinese_name": "东南大学",
+        "english_name": "Southeast University",
+        "class_rank": "A",
+        "rank": "15"
+    },
+    {
+        "chinese_name": "北京理工大学",
+        "english_name": "Beijing Institute of Technology",
+        "class_rank": "A",
+        "rank": "16"
+    },
+    {
+        "chinese_name": "同济大学",
+        "english_name": "Tongji University",
+        "class_rank": "A",
+        "rank": "17"
+    },
+    {
+        "chinese_name": "中国人民大学",
+        "english_name": "Renmin University of China",
+        "class_rank": "A",
+        "rank": "18"
+    },
+    {
+        "chinese_name": "北京师范大学",
+        "english_name": "Beijing Normal University",
+        "class_rank": "A",
+        "rank": "19"
+    },
+    {
+        "chinese_name": "南开大学",
+        "english_name": "Nankai University",
+        "class_rank": "A",
+        "rank": "20"
+    },
+    {
+        "chinese_name": "天津大学",
+        "english_name": "Tianjin University",
+        "class_rank": "A",
+        "rank": "21"
+    },
+    {
+        "chinese_name": "山东大学",
+        "english_name": "Shandong University",
+        "class_rank": "A",
+        "rank": "22"
+    },
+    {
+        "chinese_name": "中南大学",
+        "english_name": "Central South University",
+        "class_rank": "A",
+        "rank": "23"
+    },
+    {
+        "chinese_name": "厦门大学",
+        "english_name": "Xiamen University",
+        "class_rank": "A",
+        "rank": "24"
+    },
+    {
+        "chinese_name": "西北工业大学",
+        "english_name": "Northwestern Polytechnical University",
+        "class_rank": "A",
+        "rank": "25"
+    },
+    {
+        "chinese_name": "华南理工大学",
+        "english_name": "South China University of Technology",
+        "class_rank": "A",
+        "rank": "26"
+    },
+    {
+        "chinese_name": "吉林大学",
+        "english_name": "Jilin University",
+        "class_rank": "A",
+        "rank": "27"
+    },
+    {
+        "chinese_name": "电子科技大学",
+        "english_name": "University of Electronic Science and Technology of China",
+        "class_rank": "A",
+        "rank": "28"
+    },
+    {
+        "chinese_name": "湖南大学",
+        "english_name": "Hunan University",
+        "class_rank": "A",
+        "rank": "29"
+    },
+    {
+        "chinese_name": "中国农业大学",
+        "english_name": "China Agricultural University",
+        "class_rank": "A",
+        "rank": "30"
+    },
+    {
+        "chinese_name": "华东师范大学",
+        "english_name": "East China Normal University",
+        "class_rank": "A",
+        "rank": "31"
+    },
+    {
+        "chinese_name": "大连理工大学",
+        "english_name": "Dalian University of Technology",
+        "class_rank": "A",
+        "rank": "32"
+    },
+    {
+        "chinese_name": "南方科技大学",
+        "english_name": "Southern University of Science and Technology",
+        "class_rank": "A",
+        "rank": "33"
+    },
+    {
+        "chinese_name": "重庆大学",
+        "english_name": "Chongqing University",
+        "class_rank": "A",
+        "rank": "34"
+    },
+    {
+        "chinese_name": "北京科技大学",
+        "english_name": "University of Science and Technology Beijing",
+        "class_rank": "A",
+        "rank": "35"
+    },
+    {
+        "chinese_name": "南京理工大学",
+        "english_name": "Nanjing University of Science and Technology",
+        "class_rank": "A",
+        "rank": "36"
+    },
+    {
+        "chinese_name": "南京航空航天大学",
+        "english_name": "Nanjing University of Aeronautics and Astronautics",
+        "class_rank": "A",
+        "rank": "37"
+    },
+    {
+        "chinese_name": "东北大学",
+        "english_name": "Northeastern University",
+        "class_rank": "A",
+        "rank": "38"
+    },
+    {
+        "chinese_name": "西安电子科技大学",
+        "english_name": "Xidian University",
+        "class_rank": "A",
+        "rank": "39"
+    },
+    {
+        "chinese_name": "兰州大学",
+        "english_name": "Lanzhou University",
+        "class_rank": "A",
+        "rank": "40"
+    },
+    {
+        "chinese_name": "苏州大学",
+        "english_name": "Soochow University (China)",
+        "class_rank": "A",
+        "rank": "40"
+    },
+    {
+        "chinese_name": "华中农业大学",
+        "english_name": "Huazhong Agricultural University",
+        "class_rank": "A",
+        "rank": "42"
+    },
+    {
+        "chinese_name": "北京交通大学",
+        "english_name": "Beijing jiaotong University",
+        "class_rank": "A",
+        "rank": "43"
+    },
+    {
+        "chinese_name": "华东理工大学",
+        "english_name": "East China University of Science and Technology",
+        "class_rank": "A",
+        "rank": "44"
+    },
+    {
+        "chinese_name": "上海科技大学",
+        "english_name": "ShanghaiTech University",
+        "class_rank": "A",
+        "rank": "45"
+    },
+    {
+        "chinese_name": "郑州大学",
+        "english_name": "Zhengzhou University",
+        "class_rank": "A",
+        "rank": "46"
+    },
+    {
+        "chinese_name": "华中师范大学",
+        "english_name": "Central China Normal University",
+        "class_rank": "A",
+        "rank": "47"
+    },
+    {
+        "chinese_name": "上海大学",
+        "english_name": "Shanghai University",
+        "class_rank": "A",
+        "rank": "48"
+    },
+    {
+        "chinese_name": "哈尔滨工程大学",
+        "english_name": "Harbin Engineering University",
+        "class_rank": "A",
+        "rank": "49"
+    },
+    {
+        "chinese_name": "暨南大学",
+        "english_name": "Jinan University",
+        "class_rank": "A",
+        "rank": "50"
+    },
+    {
+        "chinese_name": "南京农业大学",
+        "english_name": "Nanjing Agricultural University",
+        "class_rank": "A",
+        "rank": "51"
+    },
+    {
+        "chinese_name": "中国石油大学（北京）",
+        "english_name": "China University of Petroleum - Beijing",
+        "class_rank": "A",
+        "rank": "52"
+    },
+    {
+        "chinese_name": "东北师范大学",
+        "english_name": "Northeast Normal University",
+        "class_rank": "A",
+        "rank": "53"
+    },
+    {
+        "chinese_name": "武汉理工大学",
+        "english_name": "Wuhan University of Technology",
+        "class_rank": "A",
+        "rank": "54"
+    },
+    {
+        "chinese_name": "西南交通大学",
+        "english_name": "Southwest Jiaotong University",
+        "class_rank": "A",
+        "rank": "55"
+    },
+    {
+        "chinese_name": "中国矿业大学",
+        "english_name": "China University of Mining and Technology - Xuzhou",
+        "class_rank": "A",
+        "rank": "56"
+    },
+    {
+        "chinese_name": "北京邮电大学",
+        "english_name": "Beijing University of Posts and Telecommunications",
+        "class_rank": "A",
+        "rank": "57"
+    },
+    {
+        "chinese_name": "南京师范大学",
+        "english_name": "Nanjing Normal University",
+        "class_rank": "A",
+        "rank": "58"
+    },
+    {
+        "chinese_name": "中国地质大学（武汉）",
+        "english_name": "China University of Geosciences (Wuhan)",
+        "class_rank": "A",
+        "rank": "59"
+    },
+    {
+        "chinese_name": "江南大学",
+        "english_name": "Jiangnan University",
+        "class_rank": "A",
+        "rank": "60"
+    },
+    {
+        "chinese_name": "河海大学",
+        "english_name": "Hohai University",
+        "class_rank": "A",
+        "rank": "61"
+    },
+    {
+        "chinese_name": "中国海洋大学",
+        "english_name": "Ocean University of China",
+        "class_rank": "A",
+        "rank": "62"
+    },
+    {
+        "chinese_name": "北京工业大学",
+        "english_name": "Beijing University of Technology",
+        "class_rank": "A",
+        "rank": "63"
+    },
+    {
+        "chinese_name": "北京化工大学",
+        "english_name": "Beijing University of Chemical Technology",
+        "class_rank": "A",
+        "rank": "64"
+    },
+    {
+        "chinese_name": "西北大学",
+        "english_name": "Northwest University",
+        "class_rank": "A",
+        "rank": "65"
+    },
+    {
+        "chinese_name": "中国石油大学（华东）",
+        "english_name": "China University of Petroleum (Huadong)",
+        "class_rank": "A",
+        "rank": "66"
+    },
+    {
+        "chinese_name": "陕西师范大学",
+        "english_name": "Shaanxi Normal University",
+        "class_rank": "A",
+        "rank": "67"
+    },
+    {
+        "chinese_name": "深圳大学",
+        "english_name": "Shenzhen University",
+        "class_rank": "A",
+        "rank": "68"
+    },
+    {
+        "chinese_name": "南昌大学",
+        "english_name": "Nanchang University",
+        "class_rank": "A",
+        "rank": "69"
+    },
+    {
+        "chinese_name": "浙江工业大学",
+        "english_name": "Zhejiang University of Technology",
+        "class_rank": "A",
+        "rank": "70"
+    },
+    {
+        "chinese_name": "中国地质大学（北京）",
+        "english_name": "China University of Geosciences (Beijing)",
+        "class_rank": "A",
+        "rank": "71"
+    },
+    {
+        "chinese_name": "西南大学",
+        "english_name": "Southwest University",
+        "class_rank": "A",
+        "rank": "72"
+    },
+    {
+        "chinese_name": "福州大学",
+        "english_name": "Fuzhou University",
+        "class_rank": "A",
+        "rank": "73"
+    },
+    {
+        "chinese_name": "西北农林科技大学",
+        "english_name": "Northwest A&F University",
+        "class_rank": "A",
+        "rank": "74"
+    },
+    {
+        "chinese_name": "华北电力大学",
+        "english_name": "North China Electric Power University",
+        "class_rank": "A",
+        "rank": "75"
+    },
+    {
+        "chinese_name": "中国矿业大学（北京）",
+        "english_name": "China University of Mining and Technology - Beijing",
+        "class_rank": "A",
+        "rank": "76"
+    },
+    {
+        "chinese_name": "东华大学",
+        "english_name": "Donghua University",
+        "class_rank": "A",
+        "rank": "77"
+    },
+    {
+        "chinese_name": "江苏大学",
+        "english_name": "Jiangsu University",
+        "class_rank": "A",
+        "rank": "78"
+    },
+    {
+        "chinese_name": "华南师范大学",
+        "english_name": "South China Normal University",
+        "class_rank": "A",
+        "rank": "79"
+    },
+    {
+        "chinese_name": "云南大学",
+        "english_name": "Yunnan University",
+        "class_rank": "A",
+        "rank": "80"
+    },
+    {
+        "chinese_name": "扬州大学",
+        "english_name": "Yangzhou University",
+        "class_rank": "A",
+        "rank": "81"
+    },
+    {
+        "chinese_name": "北京林业大学",
+        "english_name": "Beijing Forestry University",
+        "class_rank": "A",
+        "rank": "82"
+    },
+    {
+        "chinese_name": "合肥工业大学",
+        "english_name": "Hefei University of Technology",
+        "class_rank": "A",
+        "rank": "83"
+    },
+    {
+        "chinese_name": "宁波大学",
+        "english_name": "Ningbo University",
+        "class_rank": "A",
+        "rank": "84"
+    },
+    {
+        "chinese_name": "南京工业大学",
+        "english_name": "Nanjing Tech University",
+        "class_rank": "A",
+        "rank": "85"
+    },
+    {
+        "chinese_name": "南京邮电大学",
+        "english_name": "Nanjing University of Posts and Telecommunications",
+        "class_rank": "A",
+        "rank": "86"
+    },
+    {
+        "chinese_name": "湖南师范大学",
+        "english_name": "Hunan Normal University",
+        "class_rank": "A",
+        "rank": "87"
+    },
+    {
+        "chinese_name": "长安大学",
+        "english_name": "Chang'an University",
+        "class_rank": "A",
+        "rank": "88"
+    },
+    {
+        "chinese_name": "首都师范大学",
+        "english_name": "Capital Normal University",
+        "class_rank": "A",
+        "rank": "89"
+    },
+    {
+        "chinese_name": "南京信息工程大学",
+        "english_name": "Nanjing University of Information Science & Technology",
+        "class_rank": "A",
+        "rank": "90"
+    },
+    {
+        "chinese_name": "杭州电子科技大学",
+        "english_name": "Hangzhou Dianzi University",
+        "class_rank": "A",
+        "rank": "91"
+    },
+    {
+        "chinese_name": "湘潭大学",
+        "english_name": "Xiangtan University",
+        "class_rank": "A",
+        "rank": "92"
+    },
+    {
+        "chinese_name": "华南农业大学",
+        "english_name": "South China Agricultural University",
+        "class_rank": "A",
+        "rank": "93"
+    },
+    {
+        "chinese_name": "燕山大学",
+        "english_name": "Yanshan University",
+        "class_rank": "A",
+        "rank": "94"
+    },
+    {
+        "chinese_name": "福建师范大学",
+        "english_name": "Fujian Normal University",
+        "class_rank": "A",
+        "rank": "95"
+    },
+    {
+        "chinese_name": "广西大学",
+        "english_name": "Guangxi University",
+        "class_rank": "A",
+        "rank": "96"
+    },
+    {
+        "chinese_name": "广州大学",
+        "english_name": "Guangzhou University",
+        "class_rank": "A",
+        "rank": "97"
+    },
+    {
+        "chinese_name": "河南大学",
+        "english_name": "Henan University",
+        "class_rank": "A",
+        "rank": "98"
+    },
+    {
+        "chinese_name": "大连海事大学",
+        "english_name": "Dalian Maritime University",
+        "class_rank": "A",
+        "rank": "99"
+    },
+    {
+        "chinese_name": "浙江师范大学",
+        "english_name": "Zhejiang Normal University",
+        "class_rank": "A",
+        "rank": "100"
+    },
+    {
+        "chinese_name": "广东工业大学",
+        "english_name": "Guangdong University of Technology",
+        "class_rank": "A",
+        "rank": "101"
+    },
+    {
+        "chinese_name": "上海理工大学",
+        "english_name": "University of Shanghai for Science and Technology",
+        "class_rank": "A",
+        "rank": "102"
+    },
+    {
+        "chinese_name": "山西大学",
+        "english_name": "Shanxi University",
+        "class_rank": "A",
+        "rank": "103"
+    },
+    {
+        "chinese_name": "安徽大学",
+        "english_name": "Anhui University",
+        "class_rank": "A",
+        "rank": "104"
+    },
+    {
+        "chinese_name": "山东师范大学",
+        "english_name": "Shandong Normal University",
+        "class_rank": "A",
+        "rank": "105"
+    },
+    {
+        "chinese_name": "河北工业大学",
+        "english_name": "Hebei University of Technology",
+        "class_rank": "A",
+        "rank": "106"
+    },
+    {
+        "chinese_name": "青岛大学",
+        "english_name": "Qingdao University",
+        "class_rank": "A",
+        "rank": "107"
+    },
+    {
+        "chinese_name": "太原理工大学",
+        "english_name": "Taiyuan University of Technology",
+        "class_rank": "A",
+        "rank": "107"
+    },
+    {
+        "chinese_name": "贵州大学",
+        "english_name": "Guizhou University",
+        "class_rank": "A",
+        "rank": "109"
+    },
+    {
+        "chinese_name": "南京林业大学",
+        "english_name": "Nanjing Forestry University",
+        "class_rank": "A",
+        "rank": "110"
+    },
+    {
+        "chinese_name": "上海师范大学",
+        "english_name": "Shanghai Normal University",
+        "class_rank": "A",
+        "rank": "111"
+    },
+    {
+        "chinese_name": "武汉科技大学",
+        "english_name": "Wuhan University of Science and Technology",
+        "class_rank": "A",
+        "rank": "111"
+    },
+    {
+        "chinese_name": "内蒙古大学",
+        "english_name": "Inner Mongolia University",
+        "class_rank": "A",
+        "rank": "113"
+    },
+    {
+        "chinese_name": "浙江理工大学",
+        "english_name": "Zhejiang Sci-Tech University",
+        "class_rank": "A",
+        "rank": "114"
+    },
+    {
+        "chinese_name": "东北林业大学",
+        "english_name": "Northeast Forestry University - China",
+        "class_rank": "A",
+        "rank": "115"
+    },
+    {
+        "chinese_name": "福建农林大学",
+        "english_name": "Fujian Agriculture and Forestry University",
+        "class_rank": "A",
+        "rank": "116"
+    },
+    {
+        "chinese_name": "西安理工大学",
+        "english_name": "Xi'an University of Technology",
+        "class_rank": "A",
+        "rank": "117"
+    },
+    {
+        "chinese_name": "海南大学",
+        "english_name": "Hainan University",
+        "class_rank": "A",
+        "rank": "118"
+    },
+    {
+        "chinese_name": "江西师范大学",
+        "english_name": "Jiangxi Normal University",
+        "class_rank": "A",
+        "rank": "119"
+    },
+    {
+        "chinese_name": "东北农业大学",
+        "english_name": "Northeast Agricultural University - China",
+        "class_rank": "A",
+        "rank": "120"
+    },
+    {
+        "chinese_name": "长沙理工大学",
+        "english_name": "Changsha University of Science and Technology",
+        "class_rank": "A",
+        "rank": "121"
+    },
+    {
+        "chinese_name": "西安建筑科技大学",
+        "english_name": "Xi'an University of Architecture and Technology",
+        "class_rank": "A",
+        "rank": "122"
+    },
+    {
+        "chinese_name": "湖北大学",
+        "english_name": "Hubei University",
+        "class_rank": "A",
+        "rank": "123"
+    },
+    {
+        "chinese_name": "昆明理工大学",
+        "english_name": "Kunming University of Science and Technology",
+        "class_rank": "A",
+        "rank": "124"
+    },
+    {
+        "chinese_name": "江苏师范大学",
+        "english_name": "Jiangsu Normal University",
+        "class_rank": "A",
+        "rank": "125"
+    },
+    {
+        "chinese_name": "山东科技大学",
+        "english_name": "Shandong University of Science and Technology",
+        "class_rank": "A",
+        "rank": "126"
+    },
+    {
+        "chinese_name": "辽宁大学",
+        "english_name": "Liaoning University",
+        "class_rank": "A",
+        "rank": "127"
+    },
+    {
+        "chinese_name": "西南石油大学",
+        "english_name": "Southwest Petroleum University",
+        "class_rank": "A",
+        "rank": "128"
+    },
+    {
+        "chinese_name": "杭州师范大学",
+        "english_name": "Hangzhou Normal University",
+        "class_rank": "A",
+        "rank": "129"
+    },
+    {
+        "chinese_name": "河北大学",
+        "english_name": "Hebei University",
+        "class_rank": "A",
+        "rank": "130"
+    },
+    {
+        "chinese_name": "陕西科技大学",
+        "english_name": "Shaanxi University of Science and Technology",
+        "class_rank": "A",
+        "rank": "131"
+    },
+    {
+        "chinese_name": "安徽师范大学",
+        "english_name": "Anhui Normal University",
+        "class_rank": "A",
+        "rank": "132"
+    },
+    {
+        "chinese_name": "北京建筑大学",
+        "english_name": "Beijing University of Civil Engineering and Architecture",
+        "class_rank": "A",
+        "rank": "133"
+    },
+    {
+        "chinese_name": "华侨大学",
+        "english_name": "Huaqiao University",
+        "class_rank": "A",
+        "rank": "134"
+    },
+    {
+        "chinese_name": "汕头大学",
+        "english_name": "Shantou University",
+        "class_rank": "A",
+        "rank": "135"
+    },
+    {
+        "chinese_name": "新疆大学",
+        "english_name": "Xinjiang University",
+        "class_rank": "A",
+        "rank": "136"
+    },
+    {
+        "chinese_name": "江苏科技大学",
+        "english_name": "Jiangsu University of Science and Technology",
+        "class_rank": "A",
+        "rank": "137"
+    },
+    {
+        "chinese_name": "石河子大学",
+        "english_name": "Shihezi University",
+        "class_rank": "A",
+        "rank": "138"
+    },
+    {
+        "chinese_name": "中国计量大学",
+        "english_name": "China Jiliang University",
+        "class_rank": "A",
+        "rank": "139"
+    },
+    {
+        "chinese_name": "河南农业大学",
+        "english_name": "Henan Agricultural University",
+        "class_rank": "A",
+        "rank": "140"
+    },
+    {
+        "chinese_name": "重庆邮电大学",
+        "english_name": "Chongqing University of Posts and Telecommunications",
+        "class_rank": "A",
+        "rank": "141"
+    },
+    {
+        "chinese_name": "湖北工业大学",
+        "english_name": "Hubei University of Technology",
+        "class_rank": "A",
+        "rank": "142"
+    },
+    {
+        "chinese_name": "沈阳农业大学",
+        "english_name": "Shenyang Agricultural University",
+        "class_rank": "A",
+        "rank": "142"
+    },
+    {
+        "chinese_name": "四川农业大学",
+        "english_name": "Sichuan Agricultural University",
+        "class_rank": "A",
+        "rank": "142"
+    }
+]

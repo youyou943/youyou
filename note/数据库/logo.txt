@@ -1,0 +1,125 @@
+数据库添加校徽列：
+ALTER TABLE universities ADD COLUMN logo LONGBLOB;
+
+找到数据库的my.ini文件，一般在数据库的DATA
+用文本编辑器打开 my.ini 文件
+[mysqld]
+max_allowed_packet=256M 找到这个，把它修改为256M
+
+按win+R，打开cmd，然后输入services.msc，手动停止和启动MySQL服务。
+
+python代码：
+
+# import pymysql
+# from PIL import Image
+# import io
+# import csv
+#
+# # 连接到 MySQL 数据库
+# conn = pymysql.connect(host='localhost', user='root', password='Yaky0651', database='info')
+# cursor = conn.cursor()
+#
+# # 定义插入图片的SQL语句
+# insert_image_query = "INSERT INTO universities (校徽) VALUES (%s)"
+#
+# # 读取CSV文件中的图片路径
+# csv_file_path = r"E:\img.csv"
+# image_data_list = []
+#
+# with open(csv_file_path, mode='r') as file:
+#     reader = csv.reader(file)
+#     next(reader)  # 跳过表头
+#
+#     for row in reader:
+#         image_path = row[0]
+#
+#         # 打开图片并转换为二进制数据
+#         with Image.open(image_path) as img:
+#             img_byte_arr = io.BytesIO()
+#             img.save(img_byte_arr, format=img.format)
+#             img_byte_data = img_byte_arr.getvalue()
+#
+#             # 将图片数据添加到列表中
+#             image_data_list.append((img_byte_data,))
+#
+# # 批量插入数据
+# cursor.executemany(insert_image_query, image_data_list)
+#
+# # 提交事务
+# conn.commit()
+#
+# # 查询刚插入的图片数据并保存到文件验证
+# select_image_query = "SELECT 校徽 FROM universities"
+#
+# cursor.execute(select_image_query)
+# results = cursor.fetchall()
+#
+# for idx, (image_data,) in enumerate(results):
+#     if image_data is None:
+#         print(f"Row {idx + 1} has NoneType image data")
+#     else:
+#         output_path = f'output_image_{idx}.jpg'
+#         with open(output_path, 'wb') as file:
+#             file.write(image_data)
+#         print(f"Image data has been written to {output_path}")
+#
+# # 关闭数据库连接
+# cursor.close()
+# conn.close()
+
+import pymysql
+from PIL import Image
+import io
+import csv
+
+# 连接到 MySQL 数据库
+conn = pymysql.connect(host='localhost', user='root', password='Yaky0651', database='info')
+cursor = conn.cursor()
+
+# 定义插入图片的SQL语句
+insert_image_query = "INSERT INTO universities (校徽) VALUES (%s)"
+
+# 读取CSV文件中的图片路径
+csv_file_path = r"E:\img.csv"
+image_data_list = []  # 在此处定义 image_data_list 变量
+
+with open(csv_file_path, mode='r') as file:
+    reader = csv.reader(file)
+    next(reader)  # 跳过表头
+
+    for row in reader:
+        image_path = row[0]
+
+        # 打开图片并转换为二进制数据
+        with Image.open(image_path) as img:
+            img_byte_arr = io.BytesIO()
+            img.save(img_byte_arr, format=img.format)
+            img_byte_data = img_byte_arr.getvalue()
+
+            # 将图片数据添加到列表中
+            image_data_list.append((img_byte_data,))
+
+# 批量插入数据
+cursor.executemany(insert_image_query, image_data_list)
+
+# 提交事务
+conn.commit()
+
+# 查询刚插入的图片数据并保存到文件验证
+select_image_query = "SELECT 校徽 FROM universities"
+
+cursor.execute(select_image_query)
+results = cursor.fetchall()
+
+for idx, (image_data,) in enumerate(results):
+    if image_data is None:
+        print(f"Row {idx + 1} has NoneType image data")
+    else:
+        output_path = f'output_image_{idx}.jpg'
+        with open(output_path, 'wb') as file:
+            file.write(image_data)
+        print(f"Image data has been written to {output_path}")
+
+# 关闭数据库连接
+cursor.close()
+conn.close()

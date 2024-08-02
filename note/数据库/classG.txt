@@ -1,0 +1,32 @@
+[
+    {
+        "chinese_name": "北京外国语大学",
+        "english_name": "Beijing Foreign Studies University",
+        "class_rank": "G",
+        "rank": "语1"
+    },
+    {
+        "chinese_name": "中国传媒大学",
+        "english_name": "Communication University of China",
+        "class_rank": "G",
+        "rank": "语2"
+    },
+    {
+        "chinese_name": "上海外国语大学",
+        "english_name": "Shanghai International Studies University",
+        "class_rank": "G",
+        "rank": "语3"
+    },
+    {
+        "chinese_name": "外交学院",
+        "english_name": "China Foreign Affairs University",
+        "class_rank": "G",
+        "rank": "语4"
+    },
+    {
+        "chinese_name": "北京语言大学",
+        "english_name": "Beijing Language and Culture University",
+        "class_rank": "G",
+        "rank": "语5"
+    }
+]

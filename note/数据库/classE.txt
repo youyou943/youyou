@@ -1,0 +1,20 @@
+[
+    {
+        "chinese_name": "香港中文大学（深圳）",
+        "english_name": "The Chinese University of Hong Kong, Shenzhen",
+        "class_rank": "E",
+        "rank": "合作1"
+    },
+    {
+        "chinese_name": "上海纽约大学",
+        "english_name": "New York University Shanghai",
+        "class_rank": "E",
+        "rank": "合作2"
+    },
+    {
+        "chinese_name": "宁波诺丁汉大学",
+        "english_name": "University of Nottingham Ningbo China",
+        "class_rank": "E",
+        "rank": "合作3"
+    }
+]

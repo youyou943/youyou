@@ -1,0 +1,110 @@
+[
+    {
+        "chinese_name": "北京协和医学院",
+        "english_name": "Peking Union Medical College",
+        "class_rank": "B",
+        "rank": "医1"
+    },
+    {
+        "chinese_name": "首都医科大学",
+        "english_name": "Capital Medical University",
+        "class_rank": "B",
+        "rank": "医2"
+    },
+    {
+        "chinese_name": "南京医科大学",
+        "english_name": "Nanjing Medical University",
+        "class_rank": "B",
+        "rank": "医3"
+    },
+    {
+        "chinese_name": "南方医科大学",
+        "english_name": "Southern Medical University",
+        "class_rank": "B",
+        "rank": "医4"
+    },
+    {
+        "chinese_name": "哈尔滨医科大学",
+        "english_name": "Harbin Medical University",
+        "class_rank": "B",
+        "rank": "医5"
+    },
+    {
+        "chinese_name": "天津医科大学",
+        "english_name": "Tianjin Medical University",
+        "class_rank": "B",
+        "rank": "医6"
+    },
+    {
+        "chinese_name": "中国医科大学",
+        "english_name": "China Medical University (Shenyang)",
+        "class_rank": "B",
+        "rank": "医7"
+    },
+    {
+        "chinese_name": "北京中医药大学",
+        "english_name": "Beijing University of Chinese Medicine",
+        "class_rank": "B",
+        "rank": "医8"
+    },
+    {
+        "chinese_name": "温州医科大学",
+        "english_name": "Wenzhou Medical University",
+        "class_rank": "B",
+        "rank": "医9"
+    },
+    {
+        "chinese_name": "中国药科大学",
+        "english_name": "China Pharmaceutical University",
+        "class_rank": "B",
+        "rank": "医10"
+    },
+    {
+        "chinese_name": "上海中医药大学",
+        "english_name": "Shanghai University of Traditional Chinese Medicine",
+        "class_rank": "B",
+        "rank": "医11"
+    },
+    {
+        "chinese_name": "重庆医科大学",
+        "english_name": "Chongqing Medical University",
+        "class_rank": "B",
+        "rank": "医12"
+    },
+    {
+        "chinese_name": "广州医科大学",
+        "english_name": "Guangzhou Medical University",
+        "class_rank": "B",
+        "rank": "医13"
+    },
+    {
+        "chinese_name": "河北医科大学",
+        "english_name": "Hebei Medical University",
+        "class_rank": "B",
+        "rank": "医14"
+    },
+    {
+        "chinese_name": "南京中医药大学",
+        "english_name": "Nanjing University of Chinese Medicine",
+        "class_rank": "B",
+        "rank": "医15"
+    },
+    {
+        "chinese_name": "大连医科大学",
+        "english_name": "Dalian Medical University",
+        "class_rank": "B",
+        "rank": "医16"
+    },
+    {
+        "chinese_name": "安徽医科大学",
+        "english_name": "Anhui Medical University",
+        "class_rank": "B",
+        "rank": "医17"
+    },
+    {
+        "chinese_name": "福建医科大学",
+        "english_name": "Fujian Medical University",
+        "class_rank": "B",
+        "rank": "医18"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "chinese_name": "中国政法大学",
+        "english_name": "China University of Political Science and Law",
+        "class_rank": "D",
+        "rank": "政1"
+    },
+    {
+        "chinese_name": "华东政法大学",
+        "english_name": "East China University of Political Science and Law",
+        "class_rank": "D",
+        "rank": "政2"
+    }
+]

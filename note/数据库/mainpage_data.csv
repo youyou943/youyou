@@ -1,0 +1,183 @@
+chinese_name,english_name,class_rank,rank
+清华大学,Tsinghua University,A,1
+北京大学,Peking University,A,2
+浙江大学,Zhejiang University,A,3
+上海交通大学,Shanghai Jiao Tong University,A,4
+复旦大学,Fudan University,A,5
+南京大学,Nanjing University,A,6
+中国科学技术大学,University of Science and Technology of China,A,7
+华中科技大学,Huazhong University of Science and Technology,A,8
+武汉大学,Wuhan University,A,9
+西安交通大学,Xi'an Jiaotong University,A,10
+中山大学,Sun Yat-Sen University,A,11
+四川大学,Sichuan University,A,12
+哈尔滨工业大学,Harbin Institute of Technology,A,13
+北京航空航天大学,Beihang University,A,14
+东南大学,Southeast University,A,15
+北京理工大学,Beijing Institute of Technology,A,16
+同济大学,Tongji University,A,17
+中国人民大学,Renmin University of China,A,18
+北京师范大学,Beijing Normal University,A,19
+南开大学,Nankai University,A,20
+天津大学,Tianjin University,A,21
+北京协和医学院,Peking Union Medical College,B,医1
+山东大学,Shandong University,A,22
+中南大学,Central South University,A,23
+厦门大学,Xiamen University,A,24
+西北工业大学,Northwestern Polytechnical University,A,25
+华南理工大学,South China University of Technology,A,26
+吉林大学,Jilin University,A,27
+电子科技大学,University of Electronic Science and Technology of China,A,28
+湖南大学,Hunan University,A,29
+中国农业大学,China Agricultural University,A,30
+华东师范大学,East China Normal University,A,31
+大连理工大学,Dalian University of Technology,A,32
+南方科技大学,Southern University of Science and Technology,A,33
+重庆大学,Chongqing University,A,34
+上海财经大学,Shanghai University of Finance and Economics,C,财1
+北京科技大学,University of Science and Technology Beijing,A,35
+南京理工大学,Nanjing University of Science and Technology,A,36
+南京航空航天大学,Nanjing University of Aeronautics and Astronautics,A,37
+东北大学,Northeastern University,A,38
+西安电子科技大学,Xidian University,A,39
+兰州大学,Lanzhou University,A,40
+苏州大学,Soochow University (China),A,40
+华中农业大学,Huazhong Agricultural University,A,42
+北京交通大学,Beijing jiaotong University,A,43
+华东理工大学,East China University of Science and Technology,A,44
+上海科技大学,ShanghaiTech University,A,45
+首都医科大学,Capital Medical University,B,医2
+郑州大学,Zhengzhou University,A,46
+中央财经大学,Central University of Finance and Economics,C,财2
+华中师范大学,Central China Normal University,A,47
+上海大学,Shanghai University,A,48
+南京医科大学,Nanjing Medical University,B,医3
+哈尔滨工程大学,Harbin Engineering University,A,49
+南方医科大学,Southern Medical University,B,医4
+暨南大学,Jinan University,A,50
+中国政法大学,China University of Political Science and Law,D,政1
+南京农业大学,Nanjing Agricultural University,A,51
+对外经济贸易大学,University of International Business and Economics,C,财3
+中国石油大学（北京）,China University of Petroleum - Beijing,A,52
+东北师范大学,Northeast Normal University,A,53
+武汉理工大学,Wuhan University of Technology,A,54
+西南交通大学,Southwest Jiaotong University,A,55
+中国矿业大学,China University of Mining and Technology - Xuzhou,A,56
+北京邮电大学,Beijing University of Posts and Telecommunications,A,57
+香港中文大学（深圳）,"The Chinese University of Hong Kong, Shenzhen",E,合作1
+南京师范大学,Nanjing Normal University,A,58
+中国地质大学（武汉）,China University of Geosciences (Wuhan),A,59
+江南大学,Jiangnan University,A,60
+河海大学,Hohai University,A,61
+中国海洋大学,Ocean University of China,A,62
+北京工业大学,Beijing University of Technology,A,63
+哈尔滨医科大学,Harbin Medical University,B,医5
+北京化工大学,Beijing University of Chemical Technology,A,64
+西北大学,Northwest University,A,65
+西南财经大学,Southwestern University of Finance and Economics,C,财4
+中国石油大学（华东）,China University of Petroleum (Huadong),A,66
+陕西师范大学,Shaanxi Normal University,A,67
+天津医科大学,Tianjin Medical University,B,医6
+中南财经政法大学,Zhongnan University of Economics and Law,C,财5
+深圳大学,Shenzhen University,A,68
+南昌大学,Nanchang University,A,69
+浙江工业大学,Zhejiang University of Technology,A,70
+中国医科大学,China Medical University (Shenyang),B,医7
+中国地质大学（北京）,China University of Geosciences (Beijing),A,71
+西南大学,Southwest University,A,72
+福州大学,Fuzhou University,A,73
+西北农林科技大学,Northwest A&F University,A,74
+华北电力大学,North China Electric Power University,A,75
+中国矿业大学（北京）,China University of Mining and Technology - Beijing,A,76
+东华大学,Donghua University,A,77
+江苏大学,Jiangsu University,A,78
+华南师范大学,South China Normal University,A,79
+云南大学,Yunnan University,A,80
+北京外国语大学,Beijing Foreign Studies University,G,语1
+扬州大学,Yangzhou University,A,81
+北京林业大学,Beijing Forestry University,A,82
+中国传媒大学,Communication University of China,G,语2
+合肥工业大学,Hefei University of Technology,A,83
+北京中医药大学,Beijing University of Chinese Medicine,B,医8
+宁波大学,Ningbo University,A,84
+南京工业大学,Nanjing Tech University,A,85
+南京邮电大学,Nanjing University of Posts and Telecommunications,A,86
+湖南师范大学,Hunan Normal University,A,87
+长安大学,Chang'an University,A,88
+首都师范大学,Capital Normal University,A,89
+南京信息工程大学,Nanjing University of Information Science & Technology,A,90
+杭州电子科技大学,Hangzhou Dianzi University,A,91
+湘潭大学,Xiangtan University,A,92
+华南农业大学,South China Agricultural University,A,93
+温州医科大学,Wenzhou Medical University,B,医9
+燕山大学,Yanshan University,A,94
+福建师范大学,Fujian Normal University,A,95
+广西大学,Guangxi University,A,96
+中国药科大学,China Pharmaceutical University,B,医10
+广州大学,Guangzhou University,A,97
+上海外国语大学,Shanghai International Studies University,G,语3
+上海中医药大学,Shanghai University of Traditional Chinese Medicine,B,医11
+河南大学,Henan University,A,98
+大连海事大学,Dalian Maritime University,A,99
+浙江师范大学,Zhejiang Normal University,A,100
+重庆医科大学,Chongqing Medical University,B,医12
+广东工业大学,Guangdong University of Technology,A,101
+广州医科大学,Guangzhou Medical University,B,医13
+上海理工大学,University of Shanghai for Science and Technology,A,102
+东北财经大学,Dongbei University of Finance and Economics,C,财6
+上海纽约大学,New York University Shanghai,E,合作2
+山西大学,Shanxi University,A,103
+外交学院,China Foreign Affairs University,G,语4
+安徽大学,Anhui University,A,104
+中央民族大学,Minzu University of China,F,民1
+山东师范大学,Shandong Normal University,A,105
+河北工业大学,Hebei University of Technology,A,106
+青岛大学,Qingdao University,A,107
+太原理工大学,Taiyuan University of Technology,A,107
+贵州大学,Guizhou University,A,109
+南京林业大学,Nanjing Forestry University,A,110
+上海师范大学,Shanghai Normal University,A,111
+武汉科技大学,Wuhan University of Science and Technology,A,111
+内蒙古大学,Inner Mongolia University,A,113
+浙江理工大学,Zhejiang Sci-Tech University,A,114
+东北林业大学,Northeast Forestry University - China,A,115
+福建农林大学,Fujian Agriculture and Forestry University,A,116
+江西财经大学,Jiangxi University of Finance & Economics,C,财7
+宁波诺丁汉大学,University of Nottingham Ningbo China,E,合作3
+西安理工大学,Xi'an University of Technology,A,117
+海南大学,Hainan University,A,118
+江西师范大学,Jiangxi Normal University,A,119
+东北农业大学,Northeast Agricultural University - China,A,120
+河北医科大学,Hebei Medical University,B,医14
+长沙理工大学,Changsha University of Science and Technology,A,121
+西安建筑科技大学,Xi'an University of Architecture and Technology,A,122
+湖北大学,Hubei University,A,123
+南京中医药大学,Nanjing University of Chinese Medicine,B,医15
+昆明理工大学,Kunming University of Science and Technology,A,124
+江苏师范大学,Jiangsu Normal University,A,125
+大连医科大学,Dalian Medical University,B,医16
+首都经济贸易大学,Capital University of Economics & Business,C,财8
+山东科技大学,Shandong University of Science and Technology,A,126
+辽宁大学,Liaoning University,A,127
+西南石油大学,Southwest Petroleum University,A,128
+杭州师范大学,Hangzhou Normal University,A,129
+河北大学,Hebei University,A,130
+陕西科技大学,Shaanxi University of Science and Technology,A,131
+安徽师范大学,Anhui Normal University,A,132
+北京建筑大学,Beijing University of Civil Engineering and Architecture,A,133
+华侨大学,Huaqiao University,A,134
+汕头大学,Shantou University,A,135
+华东政法大学,East China University of Political Science and Law,D,政2
+新疆大学,Xinjiang University,A,136
+江苏科技大学,Jiangsu University of Science and Technology,A,137
+石河子大学,Shihezi University,A,138
+中国计量大学,China Jiliang University,A,139
+北京语言大学,Beijing Language and Culture University,G,语5
+河南农业大学,Henan Agricultural University,A,140
+安徽医科大学,Anhui Medical University,B,医17
+重庆邮电大学,Chongqing University of Posts and Telecommunications,A,141
+湖北工业大学,Hubei University of Technology,A,142
+沈阳农业大学,Shenyang Agricultural University,A,142
+四川农业大学,Sichuan Agricultural University,A,142
+福建医科大学,Fujian Medical University,B,医18
+浙江工商大学,Zhejiang Gongshang University,C,财9

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Introduction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file for styles -->
+    <!-- 引入 Element UI 的 CSS 文件 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入 Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- 引入 Vue.js 和 Element UI JS -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <style>
+        body {
+            background: #f0f0f0;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            transition: background-color 0.3s ease;
+
+        }
+
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 25px 10px 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            text-align: center;
+            transition: opacity 0.3s ease;
+            /*background-image: url('./static/backimg/img3.jpg');*/
+            /*background-size: cover;*/
+            height: 280px;
+
+            position: fixed;
+            top: 0;
+            width: 80%;
+            z-index: 2;
+
+
+        }
+
+        .header h3 {
+            color: #eadbdb;
+        }
+
+        .university-name {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ecf6f8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin-top: 40px;
+        }
+
+        .university-ename {
+            font-size: 24px;
+            margin-bottom: 40px;
+            color: #555;
+            transition: color 0.3s ease;
+            margin-top: 60px;
+        }
+
+        .university-introduction {
+            width: 50%;
+            /* 让其占据一半的宽度 */
+            margin-right: auto;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: opacity 0.3s ease;
+            flex-wrap: wrap;
+            /* 当空间不足时换行 */
+            justify-content: space-between;
+            /* 元素之间的空间均匀分布 */
+        }
+
+        .university-introduction h3,
+        .professor-introduction h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 40px;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        .university-introduction p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #333;
+            transition: color 0.3s ease;
+
+        }
+
+        .college-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            transition: opacity 0.3s ease;
+        }
+
+        .college {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: calc(25% - 15px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .college a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .college:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .college a:hover {
+            color: #941971;
+            transition: color 0.3s ease;
+        }
+
+        @media (max-width: 992px) {
+            .college {
+                width: calc(33.33% - 20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .college {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .college {
+                width: calc(100% - 20px);
+            }
+        }
+
+        #toggle-departments {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+
+        }
+
+        #toggle-departments:hover {
+            background-color: #0056b3;
+        }
+
+        .image-container {
+            width: 50%;
+            /* 让其占据 45% 的宽度 */
+            margin-left: auto;
+
+            /* 图片容器靠右对齐 */
+            .content2 {
+                display: flex;
+
+                justify-content: space-between;
+                /* 元素之间的空间均匀分布 */
+            }
+
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .content2,
+        .professor-introduction {
+            visibility: hidden;
+            /* 初始状态隐藏 */
+        }
+
+        .content2.show,
+        .professor-introduction.show {
+            visibility: visible;
+            /* 根据 JavaScript 控制显示 */
+        }
+
+        .professor-introduction {
+            position: relative;
+            top: -300px;
+            /* 负值表示向上移动 */
+            transition: top 0.3s ease;
+            /* 添加过渡效果 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="college-info" class="container">
+        <div id="app" style="width: 1010px; margin: 0 auto;" class="pic">
+            <div class="block">
+                <el-carousel height="480px" width="1200px">
+                    <el-carousel-item>
+                        <img src="./static/backimg/img3.jpg" alt="Image 3"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </el-carousel-item>
+                    <el-carousel-item>
+                        <img src="./static/backimg/img1.jpg" alt="Image 1"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </el-carousel-item>
+                    <el-carousel-item>
+                        <img src="./static/backimg/img2.jpg" alt="Image 2"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </el-carousel-item>
+                </el-carousel>
+            </div>
+        </div>
+        <div class="header">
+            <a href="{{users[6]}}" class="university-name">{{users[1]}}</a>
+            <h3 class="university-ename">{{users[2]}}</h3>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#college-info">学院信息</a></li>
+                <li><a href="#departments">院系设置</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="content2" style="display: flex; align-items: center;">
+                <div class="university-introduction" style="flex: 1;">
+                    <div style="text-align: left;">
+                        <h3>Location</h3>
+                        <p>{{users[3]}}</p>
+                        <h3>Address</h3>
+                        <p>{{users[5]}}</p>
+                        <h3>Overall Ranking</h3>
+                        <p>{{users[4]}}</p>
+                    </div>
+                </div>
+                <div class="image-container" style="flex: 1;">
+                    <img src="{{ url_for('static', filename=users[9]) }}" alt="{{users[9]}}" width="366px"
+                        height="366px">
+                </div>
+            </div>
+            <div id="departments" class="professor-introduction">
+                <button id="toggle-departments">展开院系设置</button>
+                <div id="departments-content">
+                    <div class="college-container">
+                        {% for college in colleges %}
+                        <div class="college">
+                            <div class="college-info">
+                                <a href="{{ college[3] }}">{{ college[1] }}</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        new Vue({
+            el: '#app'
+        });
+        new Vue({
+            el: '#classify',
+            data() {
+                return {
+                    drawer: false, // 控制抽屉的显示隐藏
+                    tableDataA: [{
+                        chinese_name: '2016-05-02',
+                        name: '王小虎',
+                        address: '上海市普陀区金沙江路 1518 弄'
+                    }, {
+                        chinese_name: '2016-05-04',
+                        name: '王小虎',
+                        address: '上海市普陀区金沙江路 1517 弄'
+                    }, {
+                        chinese_name: '2016-05-01',
+                        name: '王小虎',
+                        address: '上海市普陀区金沙江路 1519 弄'
+                    }, {
+                        chinese_name: '2016-05-03',
+                        name: '王小虎',
+                        address: '上海市普陀区金沙江路 1516 弄'
+                    }]
+                };
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const universityName = document.querySelector('.university-name');
+
+            universityName.addEventListener('mouseover', function () {
+                universityName.style.color = '#ff6f61'; // 改变大学名称的颜色为橙色
+            });
+
+            universityName.addEventListener('mouseout', function () {
+                universityName.style.color = '#ecf6f8'; // 恢复大学名称的原始颜色
+            });
+            const toggleDepartmentsBtn = document.getElementById('toggle-departments');
+            const departmentsContent = document.getElementById('departments-content');
+            departmentsContent.style.display = 'none';
+            toggleDepartmentsBtn.addEventListener('click', function () {
+                if (departmentsContent.style.display == 'none' || departmentsContent.style.display == '') {
+                    departmentsContent.style.display = 'block';
+                    toggleDepartmentsBtn.innerText = '收起院系设置';
+                } else {
+                    departmentsContent.style.display = 'none';
+                    toggleDepartmentsBtn.innerText = '展开院系设置';
+                }
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            // 获取导航栏链接
+            const navLinks = document.querySelectorAll('.navbar ul li a');
+
+            // 获取要显示或隐藏的内容部分
+            const content2 = document.querySelector('.content2');
+            const professorIntroduction = document.querySelector('.professor-introduction');
+            content2.classList.add('show');
+            // 根据导航栏链接的点击事件来显示或隐藏相应的内容部分
+            navLinks.forEach((link) => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault(); // 阻止默认的链接行为
+                    const targetId = this.getAttribute('href'); // 获取链接的目标ID
+                    if (targetId === '#college-info') {
+                        professorIntroduction.classList.remove('show');
+                        content2.classList.add('show');
+                    } else if (targetId === '#departments') {
+                        professorIntroduction.classList.add('show');
+                        content2.classList.remove('show');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
